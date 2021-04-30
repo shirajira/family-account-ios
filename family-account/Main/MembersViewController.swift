@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - ViewController.swift
+// Family Account - MembersViewController.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -18,13 +18,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MembersViewController: UIViewController {
+
+    // MARK: - Override Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setupNavigationBar()
     }
 
+    // MARK: - Setup Methods
+
+    private func setupNavigationBar() {
+        if let navigation = navigationController {
+            navigation.navigationBar.barTintColor = .mainAccent
+            navigation.navigationBar.isTranslucent = false
+            navigation.navigationBar.tintColor = .mainWhite
+            navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainWhite]
+            navigation.navigationBar.shadowImage = UIImage()
+        }
+    }
 
 }
-
