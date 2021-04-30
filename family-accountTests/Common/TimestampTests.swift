@@ -36,4 +36,11 @@ class TimestampTests: XCTestCase {
         XCTAssertEqual(stamp.count, 14)
     }
 
+    func testTimestampEmptyFormat() {
+        let format = ""
+        let stamp = timestamp(format: format)
+        print(stamp)
+        XCTAssertTrue(stamp.isEmpty)
+    }
+
 }
