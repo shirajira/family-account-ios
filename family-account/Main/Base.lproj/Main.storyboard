@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="784" y="65"/>
         </scene>
-        <!--Test-->
+        <!--Members View Controller-->
         <scene sceneID="JrP-O9-rcL">
             <objects>
                 <viewController storyboardIdentifier="Members" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pgi-Ca-YMA" customClass="MembersViewController" customModule="family_account" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +136,7 @@
                         <viewLayoutGuide key="safeArea" id="cEh-VK-Xhz"/>
                         <color key="backgroundColor" name="MainBackground"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Test" id="fP4-Mo-hnS"/>
+                    <navigationItem key="navigationItem" id="fP4-Mo-hnS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kij-9g-V4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
