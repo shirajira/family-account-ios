@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - Colors.swift
+// Family Account - Copyright.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -16,19 +16,14 @@
 // limitations under the License.
 //--------------------------------------------------------------------------//
 
-import UIKit
 import Foundation
 
-extension UIColor {
-
-    static let mainBackground = UIColor(named: "MainBackground")!
-    static let mainBackgroundInactive = UIColor(named: "MainBackgroundInactive")!
-
-    static let mainForeground = UIColor(named: "MainForeground")!
-    static let mainForegroundInactive = UIColor(named: "MainForegroundInactive")!
-
-    static let mainLink = UIColor(named: "MainLink")!
-    static let mainNavigation = UIColor(named: "MainNavigation")!
-    static let mainWhite = UIColor(named: "MainWhite")!
-
+/**
+ Create a copyright notation based on the current year.
+ - returns: Copyright (© yyyy Family Account)
+ */
+func createCopyrightNotation() -> String {
+    let currentYear = timestamp(format: "yyyy")
+    let notation = "© \(currentYear) Family Account"
+    return notation
 }

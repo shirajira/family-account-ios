@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdP-sg-p4j">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -57,7 +57,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="https://github.com/shirajira/family-account-ios/">
-                                            <color key="titleColor" name="MainAccent"/>
+                                            <color key="titleColor" name="MainLink"/>
                                         </state>
                                         <connections>
                                             <action selector="tapLinkToRepository:" destination="BdP-sg-p4j" eventType="touchUpInside" id="PhH-rB-6Dd"/>
@@ -133,25 +133,61 @@
                     <view key="view" contentMode="scaleToFill" id="RVU-E9-Vcc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IX-vK-ccH" userLabel="Footer View">
+                                <rect key="frame" x="0.0" y="838" width="414" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Copyright&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-28-V9F">
+                                        <rect key="frame" x="177" y="6" width="60.5" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" name="MainWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="MainNavigation"/>
+                                <constraints>
+                                    <constraint firstItem="mA4-28-V9F" firstAttribute="centerX" secondItem="9IX-vK-ccH" secondAttribute="centerX" id="9Fs-wa-mvZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA4-28-V9F" secondAttribute="trailing" constant="15" id="N1I-Ao-0rk"/>
+                                    <constraint firstItem="mA4-28-V9F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9IX-vK-ccH" secondAttribute="leading" constant="15" id="YmG-TQ-Rvf"/>
+                                    <constraint firstItem="mA4-28-V9F" firstAttribute="top" secondItem="9IX-vK-ccH" secondAttribute="top" constant="6" id="mn3-xZ-NxU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cEh-VK-Xhz"/>
                         <color key="backgroundColor" name="MainBackground"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9IX-vK-ccH" secondAttribute="bottom" id="ZhC-x5-wPr"/>
+                            <constraint firstItem="9IX-vK-ccH" firstAttribute="leading" secondItem="cEh-VK-Xhz" secondAttribute="leading" id="bF3-Es-drk"/>
+                            <constraint firstItem="9IX-vK-ccH" firstAttribute="trailing" secondItem="cEh-VK-Xhz" secondAttribute="trailing" id="e9U-BW-L2H"/>
+                            <constraint firstItem="9IX-vK-ccH" firstAttribute="centerX" secondItem="RVU-E9-Vcc" secondAttribute="centerX" id="kI9-rx-AD1"/>
+                            <constraint firstItem="cEh-VK-Xhz" firstAttribute="bottom" secondItem="mA4-28-V9F" secondAttribute="bottom" constant="6" id="xiM-S7-7Ay"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fP4-Mo-hnS"/>
+                    <connections>
+                        <outlet property="copyrightLabel" destination="mA4-28-V9F" id="BJE-fF-U4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kij-9g-V4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1691" y="65"/>
+            <point key="canvasLocation" x="1689.8550724637682" y="64.955357142857139"/>
         </scene>
     </scenes>
     <resources>
-        <namedColor name="MainAccent">
-            <color red="0.11700000000000001" green="0.3880000114440918" blue="0.70499998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="MainBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainForeground">
             <color red="0.15000000596046448" green="0.15000000596046448" blue="0.15000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainLink">
+            <color red="0.11699999868869781" green="0.3880000114440918" blue="0.70499998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainNavigation">
+            <color red="0.2083582729101181" green="0.34342578053474426" blue="0.44990786910057068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainWhite">
+            <color red="0.89999997615814209" green="0.89999997615814209" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

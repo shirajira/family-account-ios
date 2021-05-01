@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - family_accountTests.swift
+// Family Account - TimestampTests.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -20,14 +20,6 @@ import XCTest
 @testable import family_account
 
 class TimestampTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
     func testTimestamp() {
         let format = "yyyyMMddHHmmss"

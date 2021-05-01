@@ -20,24 +20,33 @@ import UIKit
 
 class MembersViewController: UIViewController {
 
+    @IBOutlet private weak var copyrightLabel: UILabel!
+
     // MARK: - Override Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationBar()
+
+        setupCopyrightNotation()
     }
 
     // MARK: - Setup Methods
 
     private func setupNavigationBar() {
         if let navigation = navigationController {
-            navigation.navigationBar.barTintColor = .mainAccent
+            navigation.navigationBar.barTintColor = .mainNavigation
             navigation.navigationBar.isTranslucent = false
             navigation.navigationBar.tintColor = .mainWhite
             navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainWhite]
             navigation.navigationBar.shadowImage = UIImage()
         }
+    }
+
+    private func setupCopyrightNotation() {
+        let copyright = createCopyrightNotation()
+        copyrightLabel.text = copyright
     }
 
 }

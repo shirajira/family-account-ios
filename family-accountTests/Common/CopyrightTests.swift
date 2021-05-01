@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - Colors.swift
+// Family Account - CopyrightTests.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -16,19 +16,15 @@
 // limitations under the License.
 //--------------------------------------------------------------------------//
 
-import UIKit
-import Foundation
+import XCTest
+@testable import family_account
 
-extension UIColor {
+class CopyrightTests: XCTestCase {
 
-    static let mainBackground = UIColor(named: "MainBackground")!
-    static let mainBackgroundInactive = UIColor(named: "MainBackgroundInactive")!
-
-    static let mainForeground = UIColor(named: "MainForeground")!
-    static let mainForegroundInactive = UIColor(named: "MainForegroundInactive")!
-
-    static let mainLink = UIColor(named: "MainLink")!
-    static let mainNavigation = UIColor(named: "MainNavigation")!
-    static let mainWhite = UIColor(named: "MainWhite")!
+    func testCopyright() {
+        let copyright = createCopyrightNotation()
+        print(copyright)
+        XCTAssertFalse(copyright.isEmpty)
+    }
 
 }
