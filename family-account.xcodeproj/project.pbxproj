@@ -21,6 +21,8 @@
 		F764142B263B27B300C7CB4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641429263B27B300C7CB4E /* LaunchScreen.storyboard */; };
 		F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B882263D8357001A5C5F /* Copyright.swift */; };
 		F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B884263D840E001A5C5F /* CopyrightTests.swift */; };
+		F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B887263D8C9D001A5C5F /* FAService.swift */; };
+		F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B889263D8DA8001A5C5F /* FAMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		F7641442263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7B0B882263D8357001A5C5F /* Copyright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copyright.swift; sourceTree = "<group>"; };
 		F7B0B884263D840E001A5C5F /* CopyrightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightTests.swift; sourceTree = "<group>"; };
+		F7B0B887263D8C9D001A5C5F /* FAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAService.swift; sourceTree = "<group>"; };
+		F7B0B889263D8DA8001A5C5F /* FAMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 			children = (
 				F764141E263B27B000C7CB4E /* AppDelegate.swift */,
 				F70B88A8263B495B00142533 /* Common */,
+				F7B0B886263D8C77001A5C5F /* FAModel */,
 				F70B88AF263B4AC300142533 /* LaunchScreen */,
 				F70B88AE263B4AB800142533 /* Main */,
 				F7641427263B27B300C7CB4E /* Assets.xcassets */,
@@ -176,6 +181,15 @@
 				F7641442263B27B300C7CB4E /* Info.plist */,
 			);
 			path = "family-accountUITests";
+			sourceTree = "<group>";
+		};
+		F7B0B886263D8C77001A5C5F /* FAModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7B0B887263D8C9D001A5C5F /* FAService.swift */,
+				F7B0B889263D8DA8001A5C5F /* FAMember.swift */,
+			);
+			path = FAModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +326,8 @@
 			files = (
 				F70B88AA263B496B00142533 /* Timestamp.swift in Sources */,
 				F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */,
+				F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */,
+				F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */,
 				F71DAA80263C71800046A6E4 /* TouchableScrollView.swift in Sources */,
 				F71DAA82263C887A0046A6E4 /* MembersViewController.swift in Sources */,
 				F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */,
