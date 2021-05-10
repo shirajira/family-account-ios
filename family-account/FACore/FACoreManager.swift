@@ -64,7 +64,7 @@ class FACoreManager {
         if !FAFileManager.checkUrlExists(url: rootUrl) {
             return false
         }
-        return FAFileManager.removeUrl(url: rootUrl)
+        return FAFileManager.remove(url: rootUrl)
     }
 
     // MARK: - Update Methods
@@ -75,7 +75,7 @@ class FACoreManager {
      - returns: Error code
      */
     @discardableResult
-    func addMember(member: FAMember) -> FAErrorCode {
+    func add(member: FAMember) -> FAErrorCode {
         let fileUrl = rootUrl.appendingPathComponent(member.filename)
         if FAFileManager.checkUrlExists(url: fileUrl) {
             return .alreadyExists
@@ -96,7 +96,7 @@ class FACoreManager {
      - returns: Error code
      */
     @discardableResult
-    func updateMember(member: FAMember) -> FAErrorCode {
+    func update(member: FAMember) -> FAErrorCode {
         let fileUrl = rootUrl.appendingPathComponent(member.filename)
         if !FAFileManager.checkUrlExists(url: fileUrl) {
             return .noFile
@@ -117,12 +117,12 @@ class FACoreManager {
      - returns: Error code
      */
     @discardableResult
-    func removeMember(member: FAMember) -> FAErrorCode {
+    func remove(member: FAMember) -> FAErrorCode {
         let fileUrl = rootUrl.appendingPathComponent(member.filename)
         if !FAFileManager.checkUrlExists(url: fileUrl) {
             return .noFile
         }
-        let ret = FAFileManager.removeUrl(url: fileUrl)
+        let ret = FAFileManager.remove(url: fileUrl)
         return ret ? .success : .unknown
     }
 
@@ -131,7 +131,7 @@ class FACoreManager {
      - returns: Member list
      */
     func getMemberList() -> [FAMember] {
-        let files = FAFileManager.listSegments(url: rootUrl)
+        let files = FAFileManager.listSegments(from: rootUrl)
         var members: [FAMember] = []
         for file in files {
             let fileUrl = rootUrl.appendingPathComponent(file)
@@ -154,6 +154,35 @@ class FACoreManager {
             return lhMember.name < rhMember.name
         }
         return members
+    }
+
+    /**
+     Get the member list.
+     - parameter member: Target member
+     - returns: Service list
+     */
+    func getServiceList(for member: FAMember) -> [FAService] {
+        let filename = member.filename
+        if filename.isEmpty {
+            return []
+        }
+        let fileUrl = rootUrl.appendingPathComponent(filename)
+        if !FAFileManager.checkUrlExists(url: fileUrl) {
+            return []
+        }
+        guard let fin = FileHandle(forReadingAtPath: fileUrl.path) else {
+            return []
+        }
+        defer {
+            fin.closeFile()
+        }
+        var services: [FAService] = []
+        let jsonData = fin.readDataToEndOfFile()
+        var member = FAMember()
+        if member.importJson(jsonData: jsonData) {
+            services = member.services
+        }
+        return services
     }
 
 }

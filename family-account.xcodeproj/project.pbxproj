@@ -26,6 +26,9 @@
 		F7641426263B27B000C7CB4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641424263B27B000C7CB4E /* Main.storyboard */; };
 		F7641428263B27B300C7CB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7641427263B27B300C7CB4E /* Assets.xcassets */; };
 		F764142B263B27B300C7CB4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641429263B27B300C7CB4E /* LaunchScreen.storyboard */; };
+		F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F326494A7800606397 /* ProfileViewController.swift */; };
+		F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */; };
+		F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */; };
 		F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B882263D8357001A5C5F /* Copyright.swift */; };
 		F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B884263D840E001A5C5F /* CopyrightTests.swift */; };
 		F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B887263D8C9D001A5C5F /* FAService.swift */; };
@@ -75,6 +78,9 @@
 		F7641437263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F764143C263B27B300C7CB4E /* family-accountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "family-accountUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7641442263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F794F4F326494A7800606397 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		F7B0B882263D8357001A5C5F /* Copyright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copyright.swift; sourceTree = "<group>"; };
 		F7B0B884263D840E001A5C5F /* CopyrightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightTests.swift; sourceTree = "<group>"; };
 		F7B0B887263D8C9D001A5C5F /* FAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAService.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 				F753731D2648C4E400B9D62A /* MemberCollectionViewCell.swift */,
 				F753731E2648C4E400B9D62A /* MemberCollectionViewCell.xib */,
 				F753732C264929FB00B9D62A /* AddMemberViewController.swift */,
+				F794F4F326494A7800606397 /* ProfileViewController.swift */,
+				F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */,
+				F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 				F764142B263B27B300C7CB4E /* LaunchScreen.storyboard in Resources */,
 				F7641428263B27B300C7CB4E /* Assets.xcassets in Resources */,
 				F7641426263B27B000C7CB4E /* Main.storyboard in Resources */,
+				F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +366,7 @@
 			files = (
 				F753732D264929FB00B9D62A /* AddMemberViewController.swift in Sources */,
 				F70B88AA263B496B00142533 /* Timestamp.swift in Sources */,
+				F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */,
 				F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */,
 				F75373292649140800B9D62A /* FAErrorCode.swift in Sources */,
 				F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */,
@@ -366,6 +377,7 @@
 				F753731C2648C41100B9D62A /* FACoreManager.swift in Sources */,
 				F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */,
 				F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */,
+				F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */,
 				F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */,
 				F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */,
 			);

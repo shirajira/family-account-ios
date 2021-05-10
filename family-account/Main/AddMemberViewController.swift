@@ -137,7 +137,7 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
         member.relationship = relationshipTextField.text!
         member.email = emailTextField.text!
         member.phoneNumber = phoneNumberTextField.text!
-        faCoreManager.addMember(member: member)
+        faCoreManager.add(member: member)
     }
 
     private func updateMember() {
@@ -148,7 +148,7 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
         member.relationship = relationshipTextField.text!
         member.email = emailTextField.text!
         member.phoneNumber = phoneNumberTextField.text!
-        faCoreManager.updateMember(member: member)
+        faCoreManager.update(member: member)
     }
 
     private func showErrorMessage(enabled: Bool) {
@@ -167,7 +167,7 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
 
     private func deleteMember() {
         if let member = targetMember {
-            faCoreManager.removeMember(member: member)
+            faCoreManager.remove(member: member)
         }
     }
 

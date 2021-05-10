@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - MemberCollectionViewCell.swift
+// Family Account - ServiceCollectionViewCell.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -18,12 +18,12 @@
 
 import UIKit
 
-class MemberCollectionViewCell: UICollectionViewCell {
+class ServiceCollectionViewCell: UICollectionViewCell {
 
     static let cellHeight: CGFloat = 48.0
 
     @IBOutlet weak private var containerView: UIView!
-    @IBOutlet weak private var memberNameLabel: UILabel!
+    @IBOutlet weak private var serviceNameLabel: UILabel!
 
     // MARK: - Override Methods
 
@@ -34,14 +34,14 @@ class MemberCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        memberNameLabel.text = ""
+        serviceNameLabel.text = ""
     }
 
     // MARK: - Setup Methods
 
-    func setup(member: FAMember, cellSize: CGSize) {
+    func setup(service: FAService, cellSize: CGSize) {
         // 1) Name
-        memberNameLabel.text = member.name
+        serviceNameLabel.text = service.name
 
         // 2) Cell width
         containerView.widthAnchor.constraint(equalToConstant: cellSize.width).isActive = true

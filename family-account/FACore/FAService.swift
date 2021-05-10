@@ -19,8 +19,8 @@
 import Foundation
 
 struct FAService: Codable {
-    /// Service name
-    var serviceName: String = ""
+    /// Name
+    var name: String = ""
 
     /// Account
     var account: String = ""

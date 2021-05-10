@@ -24,27 +24,27 @@ class FAManagerTests: XCTestCase {
     private let testRoot: String = "TestMembers"
 
     func testRootDirectory() {
-        let faManager = FACoreManager(testRoot: testRoot)
+        let faCoreManager = FACoreManager(testRoot: testRoot)
 
-        XCTAssertTrue(faManager.createRootDirectory())
-        XCTAssertTrue(faManager.createRootDirectory())
-        XCTAssertTrue(faManager.removeRootDirectory())
-        XCTAssertFalse(faManager.removeRootDirectory())
+        XCTAssertTrue(faCoreManager.createRootDirectory())
+        XCTAssertTrue(faCoreManager.createRootDirectory())
+        XCTAssertTrue(faCoreManager.removeRootDirectory())
+        XCTAssertFalse(faCoreManager.removeRootDirectory())
     }
 
     func testMembers() {
-        let faManager = FACoreManager(testRoot: testRoot)
-        faManager.createRootDirectory()
+        let faCoreManager = FACoreManager(testRoot: testRoot)
+        faCoreManager.createRootDirectory()
 
         let memberC = FAMember(filename: "memberC.json", name: "C", relationship: "CC", email: "CCC", phoneNumber: "CCCC", iconFilePath: "CCCCC", services: [])
-        XCTAssertEqual(faManager.addMember(member: memberC), FAErrorCode.success)
-        XCTAssertEqual(faManager.addMember(member: memberC), FAErrorCode.alreadyExists)
+        XCTAssertEqual(faCoreManager.add(member: memberC), FAErrorCode.success)
+        XCTAssertEqual(faCoreManager.add(member: memberC), FAErrorCode.alreadyExists)
         let memberB = FAMember(filename: "memberB.json", name: "B", relationship: "BB", email: "BBB", phoneNumber: "BBBB", iconFilePath: "BBBBB", services: [])
-        XCTAssertEqual(faManager.addMember(member: memberB), FAErrorCode.success)
+        XCTAssertEqual(faCoreManager.add(member: memberB), FAErrorCode.success)
         let memberA = FAMember(filename: "memberA.json", name: "A", relationship: "AA", email: "AAA", phoneNumber: "AAAA", iconFilePath: "AAAAA", services: [])
-        XCTAssertEqual(faManager.addMember(member: memberA), FAErrorCode.success)
+        XCTAssertEqual(faCoreManager.add(member: memberA), FAErrorCode.success)
 
-        let members = faManager.getMemberList()
+        let members = faCoreManager.getMemberList()
         XCTAssertEqual(members.count, 3)
         XCTAssertEqual(members[0].filename, "memberA.json")
         XCTAssertEqual(members[1].filename, "memberB.json")
@@ -54,15 +54,15 @@ class FAManagerTests: XCTestCase {
         }
 
         let memberD = FAMember(filename: "memberD.json", name: "D", relationship: "DD", email: "DDD", phoneNumber: "DDDD", iconFilePath: "DDDDD", services: [])
-        XCTAssertEqual(faManager.updateMember(member: memberD), FAErrorCode.noFile)
-        XCTAssertEqual(faManager.removeMember(member: memberD), FAErrorCode.noFile)
-        XCTAssertEqual(faManager.addMember(member: memberD), FAErrorCode.success)
+        XCTAssertEqual(faCoreManager.update(member: memberD), FAErrorCode.noFile)
+        XCTAssertEqual(faCoreManager.remove(member: memberD), FAErrorCode.noFile)
+        XCTAssertEqual(faCoreManager.add(member: memberD), FAErrorCode.success)
 
         let memberAA = FAMember(filename: "memberA.json", name: "AA", relationship: "AA", email: "AAA", phoneNumber: "AAAA", iconFilePath: "AAAAA", services: [])
-        XCTAssertEqual(faManager.updateMember(member: memberAA), FAErrorCode.success)
+        XCTAssertEqual(faCoreManager.update(member: memberAA), FAErrorCode.success)
 
-        XCTAssertEqual(faManager.removeMember(member: memberB), FAErrorCode.success)
-        let modifiedMembers = faManager.getMemberList()
+        XCTAssertEqual(faCoreManager.remove(member: memberB), FAErrorCode.success)
+        let modifiedMembers = faCoreManager.getMemberList()
         XCTAssertEqual(modifiedMembers.count, 3)
         XCTAssertEqual(modifiedMembers[0].filename, "memberA.json")
         XCTAssertEqual(modifiedMembers[1].filename, "memberC.json")
@@ -71,7 +71,7 @@ class FAManagerTests: XCTestCase {
             print(member)
         }
 
-        faManager.removeRootDirectory()
+        faCoreManager.removeRootDirectory()
     }
 
 }

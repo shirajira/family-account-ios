@@ -53,6 +53,10 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
             if let addMemberViewController = segue.destination as? AddMemberViewController {
                 addMemberViewController.setup(editMode: false, targetMember: nil)
             }
+        } else if segue.identifier == "toProfile" {
+            if let profileViewController = segue.destination as? ProfileViewController {
+                profileViewController.setup(member: selectedMember)
+            }
         }
     }
 
@@ -118,9 +122,7 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedMember = members[indexPath.item]
-
-        // TODO:
-        // Perform segue.
+        performSegue(withIdentifier: "toProfile", sender: nil)
     }
 
 }

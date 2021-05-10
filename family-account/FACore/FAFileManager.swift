@@ -32,7 +32,7 @@ class FAFileManager {
         return exists
     }
 
-    static func listSegments(url: URL) -> [String] {
+    static func listSegments(from url: URL) -> [String] {
         guard let files = try? fileManager.contentsOfDirectory(atPath: url.path) else {
             return []
         }
@@ -55,7 +55,7 @@ class FAFileManager {
     }
 
     @discardableResult
-    static func removeUrl(url: URL) -> Bool {
+    static func remove(url: URL) -> Bool {
         var ret: Bool = false
         do {
             try fileManager.removeItem(at: url)
