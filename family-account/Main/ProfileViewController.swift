@@ -50,6 +50,14 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         updateServiceList()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddService" {
+            if let addServiceViewController = segue.destination as? AddServiceViewController {
+                addServiceViewController.setup(targetMember: selectedMember, editMode: false, targetServiceIndex: -1)
+            }
+        }
+    }
+
     // MARK: - Setup Methods
 
     func setup(member: FAMember) {

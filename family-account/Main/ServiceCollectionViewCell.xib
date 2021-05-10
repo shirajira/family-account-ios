@@ -55,8 +55,8 @@
             </constraints>
             <size key="customSize" width="340" height="48"/>
             <connections>
-                <outlet property="containerView" destination="XQ3-r4-qzE" id="s4w-gj-w8V"/>
-                <outlet property="serviceNameLabel" destination="4bF-b2-o1p" id="mF7-qG-vfp"/>
+                <outlet property="containerView" destination="XQ3-r4-qzE" id="Kf4-dP-gCh"/>
+                <outlet property="serviceNameLabel" destination="THK-5M-3qQ" id="QF9-9C-DPD"/>
             </connections>
             <point key="canvasLocation" x="321.73913043478262" y="62.946428571428569"/>
         </collectionViewCell>

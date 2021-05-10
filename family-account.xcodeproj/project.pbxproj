@@ -29,6 +29,7 @@
 		F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F326494A7800606397 /* ProfileViewController.swift */; };
 		F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */; };
 		F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */; };
+		F794F4FA2649716600606397 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F92649716600606397 /* AddServiceViewController.swift */; };
 		F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B882263D8357001A5C5F /* Copyright.swift */; };
 		F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B884263D840E001A5C5F /* CopyrightTests.swift */; };
 		F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B887263D8C9D001A5C5F /* FAService.swift */; };
@@ -81,6 +82,7 @@
 		F794F4F326494A7800606397 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		F794F4F92649716600606397 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
 		F7B0B882263D8357001A5C5F /* Copyright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copyright.swift; sourceTree = "<group>"; };
 		F7B0B884263D840E001A5C5F /* CopyrightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightTests.swift; sourceTree = "<group>"; };
 		F7B0B887263D8C9D001A5C5F /* FAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAService.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				F794F4F326494A7800606397 /* ProfileViewController.swift */,
 				F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */,
 				F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */,
+				F794F4F92649716600606397 /* AddServiceViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */,
 				F753731F2648C4E400B9D62A /* MemberCollectionViewCell.swift in Sources */,
 				F71DAA80263C71800046A6E4 /* TouchableScrollView.swift in Sources */,
+				F794F4FA2649716600606397 /* AddServiceViewController.swift in Sources */,
 				F71DAA82263C887A0046A6E4 /* MembersViewController.swift in Sources */,
 				F753731C2648C41100B9D62A /* FACoreManager.swift in Sources */,
 				F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */,
