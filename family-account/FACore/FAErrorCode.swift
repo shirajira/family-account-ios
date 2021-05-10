@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - FAService.swift
+// Family Account - FAErrorCode.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -18,23 +18,16 @@
 
 import Foundation
 
-struct FAService: Codable {
-    /// Service name
-    var serviceName: String = ""
+enum FAErrorCode {
 
-    /// Account
-    var account: String = ""
+    // MARK: - Success
 
-    /// Password
-    var password: String = ""
+    case success
 
-    /// Notes
-    var notes: String = ""
+    // MARK: - Failure
 
-    /// Created timestamp
-    var created: String = ""
-
-    /// Updated timestamp
-    var updated: String = ""
+    case alreadyExists
+    case noFile
+    case unknown
 
 }

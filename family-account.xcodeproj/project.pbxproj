@@ -17,6 +17,9 @@
 		F753731C2648C41100B9D62A /* FAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753731B2648C41100B9D62A /* FAManager.swift */; };
 		F753731F2648C4E400B9D62A /* MemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753731D2648C4E400B9D62A /* MemberCollectionViewCell.swift */; };
 		F75373202648C4E400B9D62A /* MemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F753731E2648C4E400B9D62A /* MemberCollectionViewCell.xib */; };
+		F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75373212648D5B700B9D62A /* FAFileManager.swift */; };
+		F75373292649140800B9D62A /* FAErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75373282649140800B9D62A /* FAErrorCode.swift */; };
+		F753732B26491BFE00B9D62A /* FAManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753732A26491BFE00B9D62A /* FAManagerTests.swift */; };
 		F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F764141E263B27B000C7CB4E /* AppDelegate.swift */; };
 		F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7641422263B27B000C7CB4E /* CautionViewController.swift */; };
 		F7641426263B27B000C7CB4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641424263B27B000C7CB4E /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		F753731B2648C41100B9D62A /* FAManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAManager.swift; sourceTree = "<group>"; };
 		F753731D2648C4E400B9D62A /* MemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		F753731E2648C4E400B9D62A /* MemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCollectionViewCell.xib; sourceTree = "<group>"; };
+		F75373212648D5B700B9D62A /* FAFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAFileManager.swift; sourceTree = "<group>"; };
+		F75373282649140800B9D62A /* FAErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAErrorCode.swift; sourceTree = "<group>"; };
+		F753732A26491BFE00B9D62A /* FAManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAManagerTests.swift; sourceTree = "<group>"; };
 		F764141B263B27B000C7CB4E /* family-account.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "family-account.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F764141E263B27B000C7CB4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7641422263B27B000C7CB4E /* CautionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,14 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		F75373232648DAE100B9D62A /* FACore */ = {
+			isa = PBXGroup;
+			children = (
+				F753732A26491BFE00B9D62A /* FAManagerTests.swift */,
+			);
+			path = FACore;
+			sourceTree = "<group>";
+		};
 		F7641412263B27B000C7CB4E = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				F70B88AB263B4A1500142533 /* Common */,
+				F75373232648DAE100B9D62A /* FACore */,
 				F70B88A6263B3CB800142533 /* family_accountTests.swift */,
 				F7641437263B27B300C7CB4E /* Info.plist */,
 			);
@@ -194,6 +209,8 @@
 		F7B0B886263D8C77001A5C5F /* FACore */ = {
 			isa = PBXGroup;
 			children = (
+				F75373212648D5B700B9D62A /* FAFileManager.swift */,
+				F75373282649140800B9D62A /* FAErrorCode.swift */,
 				F7B0B887263D8C9D001A5C5F /* FAService.swift */,
 				F7B0B889263D8DA8001A5C5F /* FAMember.swift */,
 				F753731B2648C41100B9D62A /* FAManager.swift */,
@@ -336,12 +353,14 @@
 			files = (
 				F70B88AA263B496B00142533 /* Timestamp.swift in Sources */,
 				F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */,
+				F75373292649140800B9D62A /* FAErrorCode.swift in Sources */,
 				F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */,
 				F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */,
 				F753731F2648C4E400B9D62A /* MemberCollectionViewCell.swift in Sources */,
 				F71DAA80263C71800046A6E4 /* TouchableScrollView.swift in Sources */,
 				F71DAA82263C887A0046A6E4 /* MembersViewController.swift in Sources */,
 				F753731C2648C41100B9D62A /* FAManager.swift in Sources */,
+				F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */,
 				F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */,
 				F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */,
 				F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */,
@@ -352,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F753732B26491BFE00B9D62A /* FAManagerTests.swift in Sources */,
 				F70B88AD263B4A2700142533 /* TimestampTests.swift in Sources */,
 				F70B88A7263B3CB800142533 /* family_accountTests.swift in Sources */,
 				F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */,

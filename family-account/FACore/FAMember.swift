@@ -19,22 +19,46 @@
 import Foundation
 
 struct FAMember: Codable {
+    /// File name
+    var filename: String = ""
+
     /// Name
-    var name: String
+    var name: String = ""
 
     /// Relationship
-    var relationship: String
+    var relationship: String = ""
 
     /// Email
-    var email: String
+    var email: String = ""
 
     /// Phone number
-    var phoneNumber: String
+    var phoneNumber: String = ""
 
     /// Icon
-    var iconFilePath: String
+    var iconFilePath: String = ""
 
     /// Services
-    var services: [FAService]
+    var services: [FAService] = []
+
+    /**
+     Convert the instance to json format.
+     - returns: Json data
+     */
+    func json() -> Data {
+        return try! JSONEncoder().encode(self)
+    }
+
+    /**
+     Import json data.
+     - parameter jsonData: Json data
+     - returns: true: Success / false: Failure
+     */
+    mutating func importJson(jsonData: Data) -> Bool {
+        guard let model = try? JSONDecoder().decode(FAMember.self, from: jsonData) else {
+            return false
+        }
+        self = model
+        return true
+    }
 
 }

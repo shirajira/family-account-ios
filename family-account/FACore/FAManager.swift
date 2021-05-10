@@ -20,4 +20,137 @@ import Foundation
 
 class FAManager {
 
+    // MARK: - Properties
+
+    static var rootName: String = "Members" // Production root name
+    let rootUrl: URL
+
+    // MARK: - Initializers
+
+    /**
+     Initializer for production.
+     */
+    init() {
+        rootUrl = FAFileManager.documentDirectory.appendingPathComponent(FAManager.rootName)
+    }
+
+    /**
+     Initializer for development.
+     */
+    init(testRoot: String) {
+        rootUrl = FAFileManager.documentDirectory.appendingPathComponent(testRoot)
+    }
+
+    // MARK: - Setup or Teardown Methods
+
+    /**
+     Create the root directory.
+     - returns: true: Success / false: Failure
+     */
+    @discardableResult
+    func createRootDirectory() -> Bool {
+        if FAFileManager.checkUrlExists(url: rootUrl) {
+            return true
+        }
+        return FAFileManager.makeDirectory(url: rootUrl)
+    }
+
+    /**
+     Remove the root directory.
+     - returns: true: Success / false: Failure
+     */
+    @discardableResult
+    func removeRootDirectory() -> Bool {
+        if !FAFileManager.checkUrlExists(url: rootUrl) {
+            return false
+        }
+        return FAFileManager.removeUrl(url: rootUrl)
+    }
+
+    // MARK: - Update Methods
+
+    /**
+     Add a new member.
+     - parameter member: New member profile
+     - returns: Error code
+     */
+    func addMember(member: FAMember) -> FAErrorCode {
+        let fileUrl = rootUrl.appendingPathComponent(member.filename)
+        if FAFileManager.checkUrlExists(url: fileUrl) {
+            return .alreadyExists
+        }
+        var ret: FAErrorCode = .unknown
+        do {
+            try member.json().write(to: fileUrl, options: .completeFileProtection)
+            ret = .success
+        } catch {
+            ret = .unknown
+        }
+        return ret
+    }
+
+    /**
+     Update the member.
+     - parameter member: Member profile to update
+     - returns: Error code
+     */
+    func updateMember(member: FAMember) -> FAErrorCode {
+        let fileUrl = rootUrl.appendingPathComponent(member.filename)
+        if !FAFileManager.checkUrlExists(url: fileUrl) {
+            return .noFile
+        }
+        var ret: FAErrorCode = .unknown
+        do {
+            try member.json().write(to: fileUrl, options: .completeFileProtection)
+            ret = .success
+        } catch {
+            ret = .unknown
+        }
+        return ret
+    }
+
+    /**
+     Remove the member.
+     - parameter member: Member profile to remove
+     - returns: Error code
+     */
+    func removeMember(member: FAMember) -> FAErrorCode {
+        let fileUrl = rootUrl.appendingPathComponent(member.filename)
+        if !FAFileManager.checkUrlExists(url: fileUrl) {
+            return .noFile
+        }
+        let ret = FAFileManager.removeUrl(url: fileUrl)
+        return ret ? .success : .unknown
+    }
+
+    /**
+     Get the member list.
+     - returns: Member list
+     */
+    func getMemberList() -> [FAMember] {
+        let files = FAFileManager.listSegments(url: rootUrl)
+        var members: [FAMember] = []
+        for file in files {
+            let fileUrl = rootUrl.appendingPathComponent(file)
+            if !FAFileManager.checkUrlExists(url: fileUrl) {
+                continue
+            }
+            guard let fin = FileHandle(forReadingAtPath: fileUrl.path) else {
+                continue
+            }
+            defer {
+                fin.closeFile()
+            }
+            let jsonData = fin.readDataToEndOfFile()
+            var member = FAMember()
+            if member.importJson(jsonData: jsonData) {
+                members.append(member)
+            }
+        }
+        members.sort { (lhMember, rhMember) -> Bool in
+            return lhMember.name < rhMember.name
+        }
+        return members
+    }
+
 }
