@@ -39,6 +39,7 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         setupNavigationBar()
         setupFAManager()
         setupCollectionView()
+        setupLongPressRecognizer()
         setupCopyrightNotation()
     }
 
@@ -85,6 +86,13 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         memberCollectionView.dataSource = self
     }
 
+    private func setupLongPressRecognizer() {
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(editMember(_:)))
+        longPressRecognizer.allowableMovement = 10
+        longPressRecognizer.minimumPressDuration = 0.5
+        memberCollectionView.addGestureRecognizer(longPressRecognizer)
+    }
+
     private func setupCopyrightNotation() {
         let copyright = createCopyrightNotation()
         copyrightLabel.text = copyright
@@ -95,6 +103,24 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     private func updateMemberList() {
         members = faCoreManager.getMemberList()
         memberCollectionView.reloadData()
+    }
+
+    // MARK: - Actions
+
+    @objc
+    private func editMember(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            let point = sender.location(in: memberCollectionView)
+            guard let indexPath = memberCollectionView.indexPathForItem(at: point) else {
+                return
+            }
+            let targetMember = members[indexPath.item]
+            guard let addMemberViewController = storyboard?.instantiateViewController(withIdentifier: "AddMember") as? AddMemberViewController else {
+                return
+            }
+            addMemberViewController.setup(editMode: true, targetMember: targetMember)
+            navigationController?.pushViewController(addMemberViewController, animated: true)
+        }
     }
 
     // MARK: - Delegate Methods (UICollectionView etc.)

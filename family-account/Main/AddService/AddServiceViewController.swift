@@ -73,6 +73,7 @@ class AddServiceViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
 
         if editMode {
+            print("Index = \(targetServiceIndex)")
             if targetServiceIndex >= 0, targetServiceIndex < targetMember.services.count {
                 let service = targetMember.services[targetServiceIndex]
                 nameTextField.text = service.name

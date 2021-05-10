@@ -25,9 +25,6 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     /// Target member
     private var targetMember = FAMember()
 
-    /// Services
-    private var services: [FAService] = []
-
     /// Target service
     private var targetService = FAService()
 
@@ -41,6 +38,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
 
         setupCollectionView()
+        setupLongPressRecognizer()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +75,13 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         serviceCollectionView.dataSource = self
     }
 
+    private func setupLongPressRecognizer() {
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(editService(_:)))
+        longPressRecognizer.allowableMovement = 10
+        longPressRecognizer.minimumPressDuration = 0.5
+        serviceCollectionView.addGestureRecognizer(longPressRecognizer)
+    }
+
     // MARK: - Update Methods
 
     private func updateProfile() {
@@ -87,18 +92,35 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     private func updateServiceList() {
-        services = faCoreManager.getServiceList(for: targetMember)
+        targetMember.services = faCoreManager.getServiceList(for: targetMember)
         serviceCollectionView.reloadData()
+    }
+
+    // MARK: - Actions
+
+    @objc
+    private func editService(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            let point = sender.location(in: serviceCollectionView)
+            guard let indexPath = serviceCollectionView.indexPathForItem(at: point) else {
+                return
+            }
+            guard let addServiceViewController = storyboard?.instantiateViewController(withIdentifier: "AddService") as? AddServiceViewController else {
+                return
+            }
+            addServiceViewController.setup(targetMember: targetMember, editMode: true, targetServiceIndex: indexPath.item)
+            navigationController?.pushViewController(addServiceViewController, animated: true)
+        }
     }
 
     // MARK: - Delegate Methods (UICollectionView etc.)
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return services.count
+        return targetMember.services.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let service = services[indexPath.item]
+        let service = targetMember.services[indexPath.item]
         let cell = serviceCollectionView.dequeueReusableCell(withReuseIdentifier: "ServiceCollectionViewCell", for: indexPath) as! ServiceCollectionViewCell
         cell.setup(service: service, cellSize: serviceCollectionView.bounds.size)
         return cell
@@ -115,7 +137,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        targetService = services[indexPath.item]
+        targetService = targetMember.services[indexPath.item]
         performSegue(withIdentifier: "toDetails", sender: nil)
     }
 
