@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - FAManager.swift
+// Family Account - FACoreManager.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -18,7 +18,7 @@
 
 import Foundation
 
-class FAManager {
+class FACoreManager {
 
     // MARK: - Properties
 
@@ -31,7 +31,7 @@ class FAManager {
      Initializer for production.
      */
     init() {
-        rootUrl = FAFileManager.documentDirectory.appendingPathComponent(FAManager.rootName)
+        rootUrl = FAFileManager.documentDirectory.appendingPathComponent(FACoreManager.rootName)
     }
 
     /**

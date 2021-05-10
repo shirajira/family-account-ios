@@ -212,6 +212,9 @@
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="sVC-ZR-Nbw" kind="show" identifier="toAddMember" id="FRt-8s-5lM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cEh-VK-Xhz"/>
@@ -246,10 +249,55 @@
             </objects>
             <point key="canvasLocation" x="1689.8550724637682" y="64.955357142857139"/>
         </scene>
+        <!--Add Member View Controller-->
+        <scene sceneID="d5G-Mm-mnI">
+            <objects>
+                <viewController id="sVC-ZR-Nbw" customClass="AddMemberViewController" customModule="family_account" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EDm-fE-GK6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qn1-CX-Ceg" customClass="TouchableScrollView" customModule="family_account" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QE9-1u-Whw" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <color key="backgroundColor" name="MainBackground"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="Ehz-F0-ciw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QE9-1u-Whw" firstAttribute="width" secondItem="Y1b-rB-Q11" secondAttribute="width" id="1Ue-9N-e0p"/>
+                                    <constraint firstItem="QE9-1u-Whw" firstAttribute="trailing" secondItem="lXA-dZ-vbB" secondAttribute="trailing" id="3Lj-lx-BpJ"/>
+                                    <constraint firstItem="QE9-1u-Whw" firstAttribute="bottom" secondItem="lXA-dZ-vbB" secondAttribute="bottom" id="IBS-QN-dKl"/>
+                                    <constraint firstItem="QE9-1u-Whw" firstAttribute="leading" secondItem="lXA-dZ-vbB" secondAttribute="leading" id="cep-hz-fdj"/>
+                                    <constraint firstItem="QE9-1u-Whw" firstAttribute="top" secondItem="lXA-dZ-vbB" secondAttribute="top" id="ngy-WE-0fh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="lXA-dZ-vbB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Y1b-rB-Q11"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Elx-mJ-ASM"/>
+                        <color key="backgroundColor" name="MainBackground"/>
+                        <constraints>
+                            <constraint firstItem="qn1-CX-Ceg" firstAttribute="leading" secondItem="Elx-mJ-ASM" secondAttribute="leading" id="08P-SZ-eev"/>
+                            <constraint firstItem="qn1-CX-Ceg" firstAttribute="top" secondItem="Elx-mJ-ASM" secondAttribute="top" id="Ldq-ht-svw"/>
+                            <constraint firstItem="qn1-CX-Ceg" firstAttribute="bottom" secondItem="Elx-mJ-ASM" secondAttribute="bottom" id="Ta1-Om-L1F"/>
+                            <constraint firstItem="qn1-CX-Ceg" firstAttribute="trailing" secondItem="Elx-mJ-ASM" secondAttribute="trailing" id="yxf-BI-83j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lAM-KE-Afs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSn-4f-pOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689.8550724637682" y="817.63392857142856"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.66811317205429077" green="0.086315527558326721" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78672617673873901" green="0.064471505582332611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

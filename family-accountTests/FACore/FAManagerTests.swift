@@ -24,7 +24,7 @@ class FAManagerTests: XCTestCase {
     private let testRoot: String = "TestMembers"
 
     func testRootDirectory() {
-        let faManager = FAManager(testRoot: testRoot)
+        let faManager = FACoreManager(testRoot: testRoot)
 
         XCTAssertTrue(faManager.createRootDirectory())
         XCTAssertTrue(faManager.createRootDirectory())
@@ -33,7 +33,7 @@ class FAManagerTests: XCTestCase {
     }
 
     func testMembers() {
-        let faManager = FAManager(testRoot: testRoot)
+        let faManager = FACoreManager(testRoot: testRoot)
         faManager.createRootDirectory()
 
         let memberC = FAMember(filename: "memberC.json", name: "C", relationship: "CC", email: "CCC", phoneNumber: "CCCC", iconFilePath: "CCCCC", services: [])

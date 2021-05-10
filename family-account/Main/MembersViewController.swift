@@ -19,9 +19,14 @@
 import UIKit
 
 class MembersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    /// FA manager
+    private let faCoreManager = FACoreManager()
 
     /// Members
     private var members: [FAMember] = []
+
+    /// Selected member
+    private var selectedMember = FAMember()
 
     @IBOutlet private weak var memberCollectionView: UICollectionView!
     @IBOutlet private weak var copyrightLabel: UILabel!
@@ -32,8 +37,23 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
 
         setupNavigationBar()
+        setupFAManager()
         setupCollectionView()
         setupCopyrightNotation()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        updateMemberList()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddMember" {
+            if let addMemberViewController = segue.destination as? AddMemberViewController {
+                addMemberViewController.setup(editMode: false, targetMember: nil)
+            }
+        }
     }
 
     // MARK: - Setup Methods
@@ -46,6 +66,10 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
             navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainWhite]
             navigation.navigationBar.shadowImage = UIImage()
         }
+    }
+
+    private func setupFAManager() {
+        faCoreManager.createRootDirectory()
     }
 
     private func setupCollectionView() {
@@ -62,7 +86,14 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         copyrightLabel.text = copyright
     }
 
-    // MARK: - Delegate Methods
+    // MARK: - Update Methods
+
+    private func updateMemberList() {
+        members = faCoreManager.getMemberList()
+        memberCollectionView.reloadData()
+    }
+
+    // MARK: - Delegate Methods (UICollectionView etc.)
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return members.count
@@ -86,7 +117,10 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        selectedMember = members[indexPath.item]
+
+        // TODO:
+        // Perform segue.
     }
 
 }
