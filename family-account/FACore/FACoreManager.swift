@@ -74,6 +74,7 @@ class FACoreManager {
      - parameter member: New member profile
      - returns: Error code
      */
+    @discardableResult
     func addMember(member: FAMember) -> FAErrorCode {
         let fileUrl = rootUrl.appendingPathComponent(member.filename)
         if FAFileManager.checkUrlExists(url: fileUrl) {
@@ -94,6 +95,7 @@ class FACoreManager {
      - parameter member: Member profile to update
      - returns: Error code
      */
+    @discardableResult
     func updateMember(member: FAMember) -> FAErrorCode {
         let fileUrl = rootUrl.appendingPathComponent(member.filename)
         if !FAFileManager.checkUrlExists(url: fileUrl) {
@@ -114,6 +116,7 @@ class FACoreManager {
      - parameter member: Member profile to remove
      - returns: Error code
      */
+    @discardableResult
     func removeMember(member: FAMember) -> FAErrorCode {
         let fileUrl = rootUrl.appendingPathComponent(member.filename)
         if !FAFileManager.checkUrlExists(url: fileUrl) {
