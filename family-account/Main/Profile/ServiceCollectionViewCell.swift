@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - MembersViewController.swift
+// Family Account - ServiceCollectionViewCell.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -18,35 +18,33 @@
 
 import UIKit
 
-class MembersViewController: UIViewController {
+class ServiceCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet private weak var copyrightLabel: UILabel!
+    static let cellHeight: CGFloat = 48.0
+
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var serviceNameLabel: UILabel!
 
     // MARK: - Override Methods
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
-        setupNavigationBar()
+    override func prepareForReuse() {
+        super.prepareForReuse()
 
-        setupCopyrightNotation()
+        serviceNameLabel.text = ""
     }
 
     // MARK: - Setup Methods
 
-    private func setupNavigationBar() {
-        if let navigation = navigationController {
-            navigation.navigationBar.barTintColor = .mainNavigation
-            navigation.navigationBar.isTranslucent = false
-            navigation.navigationBar.tintColor = .mainWhite
-            navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainWhite]
-            navigation.navigationBar.shadowImage = UIImage()
-        }
-    }
+    func setup(service: FAService, cellSize: CGSize) {
+        // 1) Name
+        serviceNameLabel.text = service.name
 
-    private func setupCopyrightNotation() {
-        let copyright = createCopyrightNotation()
-        copyrightLabel.text = copyright
+        // 2) Cell width
+        containerView.widthAnchor.constraint(equalToConstant: cellSize.width).isActive = true
     }
 
 }

@@ -14,13 +14,27 @@
 		F71DAA80263C71800046A6E4 /* TouchableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAA7F263C71800046A6E4 /* TouchableScrollView.swift */; };
 		F71DAA82263C887A0046A6E4 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAA81263C887A0046A6E4 /* MembersViewController.swift */; };
 		F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DAA83263C8CD70046A6E4 /* Colors.swift */; };
+		F753731C2648C41100B9D62A /* FACoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753731B2648C41100B9D62A /* FACoreManager.swift */; };
+		F753731F2648C4E400B9D62A /* MemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753731D2648C4E400B9D62A /* MemberCollectionViewCell.swift */; };
+		F75373202648C4E400B9D62A /* MemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F753731E2648C4E400B9D62A /* MemberCollectionViewCell.xib */; };
+		F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75373212648D5B700B9D62A /* FAFileManager.swift */; };
+		F75373292649140800B9D62A /* FAErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75373282649140800B9D62A /* FAErrorCode.swift */; };
+		F753732B26491BFE00B9D62A /* FAManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753732A26491BFE00B9D62A /* FAManagerTests.swift */; };
+		F753732D264929FB00B9D62A /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753732C264929FB00B9D62A /* AddMemberViewController.swift */; };
 		F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F764141E263B27B000C7CB4E /* AppDelegate.swift */; };
 		F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7641422263B27B000C7CB4E /* CautionViewController.swift */; };
 		F7641426263B27B000C7CB4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641424263B27B000C7CB4E /* Main.storyboard */; };
 		F7641428263B27B300C7CB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7641427263B27B300C7CB4E /* Assets.xcassets */; };
 		F764142B263B27B300C7CB4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641429263B27B300C7CB4E /* LaunchScreen.storyboard */; };
+		F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F326494A7800606397 /* ProfileViewController.swift */; };
+		F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */; };
+		F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */; };
+		F794F4FA2649716600606397 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F92649716600606397 /* AddServiceViewController.swift */; };
+		F794F4FC264982B600606397 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4FB264982B600606397 /* DetailsViewController.swift */; };
 		F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B882263D8357001A5C5F /* Copyright.swift */; };
 		F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B884263D840E001A5C5F /* CopyrightTests.swift */; };
+		F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B887263D8C9D001A5C5F /* FAService.swift */; };
+		F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0B889263D8DA8001A5C5F /* FAMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +62,13 @@
 		F71DAA7F263C71800046A6E4 /* TouchableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableScrollView.swift; sourceTree = "<group>"; };
 		F71DAA81263C887A0046A6E4 /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		F71DAA83263C8CD70046A6E4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F753731B2648C41100B9D62A /* FACoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FACoreManager.swift; sourceTree = "<group>"; };
+		F753731D2648C4E400B9D62A /* MemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		F753731E2648C4E400B9D62A /* MemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCollectionViewCell.xib; sourceTree = "<group>"; };
+		F75373212648D5B700B9D62A /* FAFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAFileManager.swift; sourceTree = "<group>"; };
+		F75373282649140800B9D62A /* FAErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAErrorCode.swift; sourceTree = "<group>"; };
+		F753732A26491BFE00B9D62A /* FAManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAManagerTests.swift; sourceTree = "<group>"; };
+		F753732C264929FB00B9D62A /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		F764141B263B27B000C7CB4E /* family-account.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "family-account.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F764141E263B27B000C7CB4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7641422263B27B000C7CB4E /* CautionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionViewController.swift; sourceTree = "<group>"; };
@@ -59,8 +80,15 @@
 		F7641437263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F764143C263B27B300C7CB4E /* family-accountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "family-accountUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7641442263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F794F4F326494A7800606397 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		F794F4F92649716600606397 /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		F794F4FB264982B600606397 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F7B0B882263D8357001A5C5F /* Copyright.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copyright.swift; sourceTree = "<group>"; };
 		F7B0B884263D840E001A5C5F /* CopyrightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightTests.swift; sourceTree = "<group>"; };
+		F7B0B887263D8C9D001A5C5F /* FAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAService.swift; sourceTree = "<group>"; };
+		F7B0B889263D8DA8001A5C5F /* FAMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				F7641424263B27B000C7CB4E /* Main.storyboard */,
-				F7641422263B27B000C7CB4E /* CautionViewController.swift */,
-				F71DAA81263C887A0046A6E4 /* MembersViewController.swift */,
+				F794F5022649915200606397 /* Caution */,
+				F794F4FD264990EA00606397 /* Members */,
+				F794F4FE2649910500606397 /* AddMember */,
+				F794F4FF2649911500606397 /* Profile */,
+				F794F5002649912A00606397 /* AddService */,
+				F794F5012649913D00606397 /* Details */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -124,6 +156,14 @@
 				F7641429263B27B300C7CB4E /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		F75373232648DAE100B9D62A /* FACore */ = {
+			isa = PBXGroup;
+			children = (
+				F753732A26491BFE00B9D62A /* FAManagerTests.swift */,
+			);
+			path = FACore;
 			sourceTree = "<group>";
 		};
 		F7641412263B27B000C7CB4E = {
@@ -151,6 +191,7 @@
 			children = (
 				F764141E263B27B000C7CB4E /* AppDelegate.swift */,
 				F70B88A8263B495B00142533 /* Common */,
+				F7B0B886263D8C77001A5C5F /* FACore */,
 				F70B88AF263B4AC300142533 /* LaunchScreen */,
 				F70B88AE263B4AB800142533 /* Main */,
 				F7641427263B27B300C7CB4E /* Assets.xcassets */,
@@ -163,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				F70B88AB263B4A1500142533 /* Common */,
+				F75373232648DAE100B9D62A /* FACore */,
 				F70B88A6263B3CB800142533 /* family_accountTests.swift */,
 				F7641437263B27B300C7CB4E /* Info.plist */,
 			);
@@ -176,6 +218,70 @@
 				F7641442263B27B300C7CB4E /* Info.plist */,
 			);
 			path = "family-accountUITests";
+			sourceTree = "<group>";
+		};
+		F794F4FD264990EA00606397 /* Members */ = {
+			isa = PBXGroup;
+			children = (
+				F71DAA81263C887A0046A6E4 /* MembersViewController.swift */,
+				F753731D2648C4E400B9D62A /* MemberCollectionViewCell.swift */,
+				F753731E2648C4E400B9D62A /* MemberCollectionViewCell.xib */,
+			);
+			path = Members;
+			sourceTree = "<group>";
+		};
+		F794F4FE2649910500606397 /* AddMember */ = {
+			isa = PBXGroup;
+			children = (
+				F753732C264929FB00B9D62A /* AddMemberViewController.swift */,
+			);
+			path = AddMember;
+			sourceTree = "<group>";
+		};
+		F794F4FF2649911500606397 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F794F4F326494A7800606397 /* ProfileViewController.swift */,
+				F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */,
+				F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F794F5002649912A00606397 /* AddService */ = {
+			isa = PBXGroup;
+			children = (
+				F794F4F92649716600606397 /* AddServiceViewController.swift */,
+			);
+			path = AddService;
+			sourceTree = "<group>";
+		};
+		F794F5012649913D00606397 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F794F4FB264982B600606397 /* DetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		F794F5022649915200606397 /* Caution */ = {
+			isa = PBXGroup;
+			children = (
+				F7641422263B27B000C7CB4E /* CautionViewController.swift */,
+			);
+			path = Caution;
+			sourceTree = "<group>";
+		};
+		F7B0B886263D8C77001A5C5F /* FACore */ = {
+			isa = PBXGroup;
+			children = (
+				F75373212648D5B700B9D62A /* FAFileManager.swift */,
+				F75373282649140800B9D62A /* FAErrorCode.swift */,
+				F7B0B887263D8C9D001A5C5F /* FAService.swift */,
+				F7B0B889263D8DA8001A5C5F /* FAMember.swift */,
+				F753731B2648C41100B9D62A /* FACoreManager.swift */,
+			);
+			path = FACore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +389,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75373202648C4E400B9D62A /* MemberCollectionViewCell.xib in Resources */,
 				F764142B263B27B300C7CB4E /* LaunchScreen.storyboard in Resources */,
 				F7641428263B27B300C7CB4E /* Assets.xcassets in Resources */,
 				F7641426263B27B000C7CB4E /* Main.storyboard in Resources */,
+				F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,11 +418,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F753732D264929FB00B9D62A /* AddMemberViewController.swift in Sources */,
 				F70B88AA263B496B00142533 /* Timestamp.swift in Sources */,
+				F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */,
 				F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */,
+				F75373292649140800B9D62A /* FAErrorCode.swift in Sources */,
+				F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */,
+				F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */,
+				F753731F2648C4E400B9D62A /* MemberCollectionViewCell.swift in Sources */,
 				F71DAA80263C71800046A6E4 /* TouchableScrollView.swift in Sources */,
+				F794F4FA2649716600606397 /* AddServiceViewController.swift in Sources */,
 				F71DAA82263C887A0046A6E4 /* MembersViewController.swift in Sources */,
+				F794F4FC264982B600606397 /* DetailsViewController.swift in Sources */,
+				F753731C2648C41100B9D62A /* FACoreManager.swift in Sources */,
+				F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */,
 				F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */,
+				F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */,
 				F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */,
 				F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */,
 			);
@@ -324,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F753732B26491BFE00B9D62A /* FAManagerTests.swift in Sources */,
 				F70B88AD263B4A2700142533 /* TimestampTests.swift in Sources */,
 				F70B88A7263B3CB800142533 /* family_accountTests.swift in Sources */,
 				F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */,
