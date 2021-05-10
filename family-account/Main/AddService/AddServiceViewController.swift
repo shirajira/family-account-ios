@@ -181,6 +181,7 @@ class AddServiceViewController: UIViewController, UITextFieldDelegate {
     private func deleteService() {
         targetMember.services.remove(at: targetServiceIndex)
         sortServices()
+        faCoreManager.update(member: targetMember)
     }
 
     private func sortServices() {
