@@ -22,8 +22,8 @@ class ServiceCollectionViewCell: UICollectionViewCell {
 
     static let cellHeight: CGFloat = 48.0
 
-    @IBOutlet weak private var containerView: UIView!
-    @IBOutlet weak private var serviceNameLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var serviceNameLabel: UILabel!
 
     // MARK: - Override Methods
 

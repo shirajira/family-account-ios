@@ -22,14 +22,14 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     /// FA manager
     private let faCoreManager = FACoreManager()
 
-    /// Selected member
-    private var selectedMember = FAMember()
+    /// Target member
+    private var targetMember = FAMember()
 
     /// Services
     private var services: [FAService] = []
 
-    /// Selected service
-    private var selectedService = FAService()
+    /// Target service
+    private var targetService = FAService()
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var relationshipLabel: UILabel!
@@ -53,7 +53,11 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddService" {
             if let addServiceViewController = segue.destination as? AddServiceViewController {
-                addServiceViewController.setup(targetMember: selectedMember, editMode: false, targetServiceIndex: -1)
+                addServiceViewController.setup(targetMember: targetMember, editMode: false, targetServiceIndex: -1)
+            }
+        } else if segue.identifier == "toDetails" {
+            if let detailsViewController = segue.destination as? DetailsViewController {
+                detailsViewController.setup(targetService: targetService)
             }
         }
     }
@@ -61,7 +65,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     // MARK: - Setup Methods
 
     func setup(member: FAMember) {
-        selectedMember = member
+        targetMember = member
     }
 
     private func setupCollectionView() {
@@ -76,14 +80,14 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     // MARK: - Update Methods
 
     private func updateProfile() {
-        nameLabel.text = selectedMember.name
-        relationshipLabel.text = selectedMember.relationship
-        emailLabel.text = selectedMember.email
-        phoneNumberLabel.text = selectedMember.phoneNumber
+        nameLabel.text = targetMember.name
+        relationshipLabel.text = targetMember.relationship
+        emailLabel.text = targetMember.email
+        phoneNumberLabel.text = targetMember.phoneNumber
     }
 
     private func updateServiceList() {
-        services = faCoreManager.getServiceList(for: selectedMember)
+        services = faCoreManager.getServiceList(for: targetMember)
         serviceCollectionView.reloadData()
     }
 
@@ -111,8 +115,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedService = services[indexPath.item]
-        //performSegue(withIdentifier: "toProfile", sender: nil)
+        targetService = services[indexPath.item]
+        performSegue(withIdentifier: "toDetails", sender: nil)
     }
 
 }

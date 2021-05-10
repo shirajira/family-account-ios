@@ -25,8 +25,8 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     /// Members
     private var members: [FAMember] = []
 
-    /// Selected member
-    private var selectedMember = FAMember()
+    /// Target member
+    private var targetMember = FAMember()
 
     @IBOutlet private weak var memberCollectionView: UICollectionView!
     @IBOutlet private weak var copyrightLabel: UILabel!
@@ -55,7 +55,7 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
             }
         } else if segue.identifier == "toProfile" {
             if let profileViewController = segue.destination as? ProfileViewController {
-                profileViewController.setup(member: selectedMember)
+                profileViewController.setup(member: targetMember)
             }
         }
     }
@@ -121,7 +121,7 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedMember = members[indexPath.item]
+        targetMember = members[indexPath.item]
         performSegue(withIdentifier: "toProfile", sender: nil)
     }
 

@@ -22,8 +22,8 @@ class MemberCollectionViewCell: UICollectionViewCell {
 
     static let cellHeight: CGFloat = 48.0
 
-    @IBOutlet weak private var containerView: UIView!
-    @IBOutlet weak private var memberNameLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var memberNameLabel: UILabel!
 
     // MARK: - Override Methods
 
