@@ -31,6 +31,9 @@ struct FAMember: Codable {
     /// Phone number
     var phoneNumber: String
 
+    /// Icon
+    var iconFilePath: String
+
     /// Services
     var services: [FAService]
 

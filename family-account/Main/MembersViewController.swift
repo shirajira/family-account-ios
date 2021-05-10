@@ -18,8 +18,12 @@
 
 import UIKit
 
-class MembersViewController: UIViewController {
+class MembersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    /// Members
+    private var members: [FAMember] = []
+
+    @IBOutlet private weak var memberCollectionView: UICollectionView!
     @IBOutlet private weak var copyrightLabel: UILabel!
 
     // MARK: - Override Methods
@@ -28,7 +32,7 @@ class MembersViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBar()
-
+        setupCollectionView()
         setupCopyrightNotation()
     }
 
@@ -44,9 +48,45 @@ class MembersViewController: UIViewController {
         }
     }
 
+    private func setupCollectionView() {
+        memberCollectionView.register(
+            UINib(nibName: "MemberCollectionViewCell", bundle: nil),
+            forCellWithReuseIdentifier: "MemberCollectionViewCell"
+        )
+        memberCollectionView.delegate = self
+        memberCollectionView.dataSource = self
+    }
+
     private func setupCopyrightNotation() {
         let copyright = createCopyrightNotation()
         copyrightLabel.text = copyright
+    }
+
+    // MARK: - Delegate Methods
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return members.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let member = members[indexPath.item]
+        let cell = memberCollectionView.dequeueReusableCell(withReuseIdentifier: "MemberCollectionViewCell", for: indexPath) as! MemberCollectionViewCell
+        cell.setup(member: member, cellSize: memberCollectionView.bounds.size)
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = memberCollectionView.bounds.width
+        let height: CGFloat = MemberCollectionViewCell.cellHeight
+        return CGSize(width: width, height: height)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
     }
 
 }
