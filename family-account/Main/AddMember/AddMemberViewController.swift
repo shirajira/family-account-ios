@@ -113,7 +113,12 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func popViewController() {
-        navigationController?.popViewController(animated: true)
+        if !editMode {
+            navigationController!.popViewController(animated: true)
+        } else {
+            let index = navigationController!.viewControllers.count - 3
+            navigationController!.popToViewController(navigationController!.viewControllers[index], animated: true)
+        }
     }
 
     private func requestToSave() {

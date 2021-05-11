@@ -26,19 +26,19 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     private var targetMember = FAMember()
 
     /// Target service
-    private var targetService = FAService()
+    private var targetServiceIndex: Int = -1
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var relationshipLabel: UILabel!
     @IBOutlet private weak var emailLabel: UILabel!
     @IBOutlet private weak var phoneNumberLabel: UILabel!
     @IBOutlet private weak var serviceCollectionView: UICollectionView!
+    @IBOutlet private weak var firstGuideLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupCollectionView()
-        setupLongPressRecognizer()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +55,11 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             }
         } else if segue.identifier == "toDetails" {
             if let detailsViewController = segue.destination as? DetailsViewController {
-                detailsViewController.setup(targetService: targetService)
+                detailsViewController.setup(targetMember: targetMember, targetServiceIndex: targetServiceIndex)
+            }
+        } else if segue.identifier == "toEditMember" {
+            if let addMemberViewController = segue.destination as? AddMemberViewController {
+                addMemberViewController.setup(editMode: true, targetMember: targetMember)
             }
         }
     }
@@ -75,42 +79,20 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         serviceCollectionView.dataSource = self
     }
 
-    private func setupLongPressRecognizer() {
-        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(editService(_:)))
-        longPressRecognizer.allowableMovement = 10
-        longPressRecognizer.minimumPressDuration = 0.5
-        serviceCollectionView.addGestureRecognizer(longPressRecognizer)
-    }
-
     // MARK: - Update Methods
 
     private func updateProfile() {
         nameLabel.text = targetMember.name
         relationshipLabel.text = targetMember.relationship
-        emailLabel.text = targetMember.email
-        phoneNumberLabel.text = targetMember.phoneNumber
+        setEmailLabel(targetMember.email)
+        setPhoneNumberLabel(targetMember.phoneNumber)
     }
 
     private func updateServiceList() {
         targetMember.services = faCoreManager.getServiceList(for: targetMember)
         serviceCollectionView.reloadData()
-    }
 
-    // MARK: - Actions
-
-    @objc
-    private func editService(_ sender: UILongPressGestureRecognizer) {
-        if sender.state == .began {
-            let point = sender.location(in: serviceCollectionView)
-            guard let indexPath = serviceCollectionView.indexPathForItem(at: point) else {
-                return
-            }
-            guard let addServiceViewController = storyboard?.instantiateViewController(withIdentifier: "AddService") as? AddServiceViewController else {
-                return
-            }
-            addServiceViewController.setup(targetMember: targetMember, editMode: true, targetServiceIndex: indexPath.item)
-            navigationController?.pushViewController(addServiceViewController, animated: true)
-        }
+        firstGuideLabel.isHidden = !targetMember.services.isEmpty
     }
 
     // MARK: - Delegate Methods (UICollectionView etc.)
@@ -137,8 +119,30 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        targetService = targetMember.services[indexPath.item]
+        targetServiceIndex = indexPath.item
         performSegue(withIdentifier: "toDetails", sender: nil)
+    }
+
+    // MARK: - Utilities
+
+    private func setEmailLabel(_ text: String) {
+        var email: String = ""
+        if text.isEmpty {
+            email = "N/A"
+        } else {
+            email = text
+        }
+        emailLabel.text = email
+    }
+
+    private func setPhoneNumberLabel(_ text: String) {
+        var phoneNumber: String = ""
+        if text.isEmpty {
+            phoneNumber = "N/A"
+        } else {
+            phoneNumber = text
+        }
+        phoneNumberLabel.text = phoneNumber
     }
 
 }

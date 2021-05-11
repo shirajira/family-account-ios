@@ -19,6 +19,12 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    /// Target member
+    private var targetMember = FAMember()
+
+    /// Target service index
+    private var targetServiceIndex: Int = -1
+
     /// Target service
     private var targetService = FAService()
 
@@ -43,14 +49,19 @@ class DetailsViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toEditService" {
-            
+            if let addServiceViewController = segue.destination as? AddServiceViewController {
+                addServiceViewController.setup(targetMember: targetMember, editMode: true, targetServiceIndex: targetServiceIndex)
+            }
         }
     }
 
     // MARK: - Setup Methods
 
-    func setup(targetService: FAService) {
-        self.targetService = targetService
+    func setup(targetMember: FAMember, targetServiceIndex: Int) {
+        self.targetMember = targetMember
+        self.targetServiceIndex = targetServiceIndex
+
+        self.targetService = self.targetMember.services[self.targetServiceIndex]
     }
 
     private func updateDetails() {
