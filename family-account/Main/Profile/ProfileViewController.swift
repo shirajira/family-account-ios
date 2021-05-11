@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     private var targetMember = FAMember()
 
     /// Target service
-    private var targetService = FAService()
+    private var targetServiceIndex: Int = -1
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var relationshipLabel: UILabel!
@@ -56,7 +56,11 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             }
         } else if segue.identifier == "toDetails" {
             if let detailsViewController = segue.destination as? DetailsViewController {
-                detailsViewController.setup(targetService: targetService)
+                detailsViewController.setup(targetMember: targetMember, targetServiceIndex: targetServiceIndex)
+            }
+        } else if segue.identifier == "toEditMember" {
+            if let addMemberViewController = segue.destination as? AddMemberViewController {
+                addMemberViewController.setup(editMode: true, targetMember: targetMember)
             }
         }
     }
@@ -140,7 +144,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        targetService = targetMember.services[indexPath.item]
+        targetServiceIndex = indexPath.item
         performSegue(withIdentifier: "toDetails", sender: nil)
     }
 
