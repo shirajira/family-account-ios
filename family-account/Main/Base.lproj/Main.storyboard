@@ -135,24 +135,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IX-vK-ccH" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="838" width="414" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Copyright&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-28-V9F">
-                                        <rect key="frame" x="177" y="6" width="60.5" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" name="MainWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="MainNavigation"/>
-                                <constraints>
-                                    <constraint firstItem="mA4-28-V9F" firstAttribute="centerX" secondItem="9IX-vK-ccH" secondAttribute="centerX" id="9Fs-wa-mvZ"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA4-28-V9F" secondAttribute="trailing" constant="15" id="N1I-Ao-0rk"/>
-                                    <constraint firstItem="mA4-28-V9F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9IX-vK-ccH" secondAttribute="leading" constant="15" id="YmG-TQ-Rvf"/>
-                                    <constraint firstItem="mA4-28-V9F" firstAttribute="top" secondItem="9IX-vK-ccH" secondAttribute="top" constant="6" id="mn3-xZ-NxU"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1B1-1k-hbH">
                                 <rect key="frame" x="15" y="103" width="89" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -183,6 +165,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a member, first." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW8-Yo-yTE" userLabel="No members. Tap the add button to get started.">
+                                <rect key="frame" x="15" y="157" width="138.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="MainForegroundInactive"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-H2-ree" userLabel="Add Button">
                                 <rect key="frame" x="330" y="754" width="64" height="64"/>
                                 <color key="backgroundColor" name="AddButton"/>
@@ -212,6 +200,24 @@
                                     <segue destination="sVC-ZR-Nbw" kind="show" identifier="toAddMember" id="FRt-8s-5lM"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IX-vK-ccH" userLabel="Footer View">
+                                <rect key="frame" x="0.0" y="838" width="414" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Copyright&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-28-V9F">
+                                        <rect key="frame" x="177" y="6" width="60.5" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" name="MainWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="MainNavigation"/>
+                                <constraints>
+                                    <constraint firstItem="mA4-28-V9F" firstAttribute="centerX" secondItem="9IX-vK-ccH" secondAttribute="centerX" id="9Fs-wa-mvZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA4-28-V9F" secondAttribute="trailing" constant="15" id="N1I-Ao-0rk"/>
+                                    <constraint firstItem="mA4-28-V9F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9IX-vK-ccH" secondAttribute="leading" constant="15" id="YmG-TQ-Rvf"/>
+                                    <constraint firstItem="mA4-28-V9F" firstAttribute="top" secondItem="9IX-vK-ccH" secondAttribute="top" constant="6" id="mn3-xZ-NxU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cEh-VK-Xhz"/>
                         <color key="backgroundColor" name="MainBackground"/>
@@ -222,9 +228,12 @@
                             <constraint firstItem="1B1-1k-hbH" firstAttribute="leading" secondItem="cEh-VK-Xhz" secondAttribute="leading" constant="15" id="LAH-iT-shx"/>
                             <constraint firstItem="9IX-vK-ccH" firstAttribute="top" secondItem="ho0-H5-ea5" secondAttribute="bottom" id="MiQ-Rv-PsL"/>
                             <constraint firstItem="ho0-H5-ea5" firstAttribute="top" secondItem="1B1-1k-hbH" secondAttribute="bottom" constant="10" id="NBV-bT-LZC"/>
+                            <constraint firstItem="cEh-VK-Xhz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EW8-Yo-yTE" secondAttribute="trailing" constant="15" id="NPd-3h-rbS"/>
+                            <constraint firstItem="EW8-Yo-yTE" firstAttribute="leading" secondItem="cEh-VK-Xhz" secondAttribute="leading" constant="15" id="XDR-8a-Gyb"/>
                             <constraint firstAttribute="bottom" secondItem="9IX-vK-ccH" secondAttribute="bottom" id="ZhC-x5-wPr"/>
                             <constraint firstItem="ho0-H5-ea5" firstAttribute="leading" secondItem="cEh-VK-Xhz" secondAttribute="leading" id="b9i-5D-KAw"/>
                             <constraint firstItem="9IX-vK-ccH" firstAttribute="leading" secondItem="cEh-VK-Xhz" secondAttribute="leading" id="bF3-Es-drk"/>
+                            <constraint firstItem="EW8-Yo-yTE" firstAttribute="top" secondItem="1B1-1k-hbH" secondAttribute="bottom" constant="30" id="d1c-5H-8dc"/>
                             <constraint firstItem="9IX-vK-ccH" firstAttribute="trailing" secondItem="cEh-VK-Xhz" secondAttribute="trailing" id="e9U-BW-L2H"/>
                             <constraint firstItem="9IX-vK-ccH" firstAttribute="centerX" secondItem="RVU-E9-Vcc" secondAttribute="centerX" id="kI9-rx-AD1"/>
                             <constraint firstItem="cEh-VK-Xhz" firstAttribute="trailing" secondItem="ho0-H5-ea5" secondAttribute="trailing" id="o8p-71-oPO"/>
@@ -235,6 +244,7 @@
                     <navigationItem key="navigationItem" id="fP4-Mo-hnS"/>
                     <connections>
                         <outlet property="copyrightLabel" destination="mA4-28-V9F" id="BJE-fF-U4s"/>
+                        <outlet property="firstGuideLabel" destination="EW8-Yo-yTE" id="QVE-OC-Lzz"/>
                         <outlet property="memberCollectionView" destination="ho0-H5-ea5" id="htO-8G-LL6"/>
                     </connections>
                 </viewController>
@@ -324,6 +334,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an account." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvM-X2-YJK" userLabel="No members. Tap the add button to get started.">
+                                <rect key="frame" x="15" y="338" width="111.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="MainForegroundInactive"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ar-CL-xhO" userLabel="Add Button">
                                 <rect key="frame" x="330" y="778" width="64" height="64"/>
                                 <color key="backgroundColor" name="AddButton"/>
@@ -358,6 +374,7 @@
                         <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="cQK-NW-DJM" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" id="0tG-pl-rgo"/>
+                            <constraint firstItem="KvM-X2-YJK" firstAttribute="leading" secondItem="rgh-WY-Ga0" secondAttribute="leading" constant="15" id="3AA-DE-4ZY"/>
                             <constraint firstItem="ybP-Dh-YBS" firstAttribute="leading" secondItem="rgh-WY-Ga0" secondAttribute="leading" constant="15" id="3bs-wk-pIj"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LEn-Bm-3l7" secondAttribute="trailing" constant="15" id="6mU-cg-Wjg"/>
                             <constraint firstItem="ibc-lN-7J6" firstAttribute="top" secondItem="LEn-Bm-3l7" secondAttribute="bottom" constant="5" id="7Ur-Gt-cUc"/>
@@ -368,6 +385,7 @@
                             <constraint firstItem="ImW-Gb-Z3M" firstAttribute="centerY" secondItem="ybP-Dh-YBS" secondAttribute="centerY" id="Ezd-ih-5cp"/>
                             <constraint firstItem="ImW-Gb-Z3M" firstAttribute="leading" secondItem="ybP-Dh-YBS" secondAttribute="trailing" constant="10" id="FJ7-nh-SZL"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ImW-Gb-Z3M" secondAttribute="trailing" constant="15" id="Kd2-nt-7jW"/>
+                            <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KvM-X2-YJK" secondAttribute="trailing" constant="15" id="Lvn-cc-IGF"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RMm-K9-9hN" secondAttribute="trailing" constant="15" id="QA0-9D-dsb"/>
                             <constraint firstItem="LEn-Bm-3l7" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" constant="15" id="S5Z-A8-ASO"/>
                             <constraint firstItem="ovf-LI-Lon" firstAttribute="top" secondItem="LEn-Bm-3l7" secondAttribute="bottom" constant="35" id="THa-X9-Adg"/>
@@ -382,14 +400,16 @@
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" secondItem="3Ar-CL-xhO" secondAttribute="trailing" constant="20" id="hUJ-T1-xSX"/>
                             <constraint firstItem="RMm-K9-9hN" firstAttribute="top" secondItem="LEn-Bm-3l7" secondAttribute="bottom" constant="109" id="pOw-bX-qfP"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="bottom" secondItem="3Ar-CL-xhO" secondAttribute="bottom" constant="20" id="rxU-42-gm5"/>
+                            <constraint firstItem="cQK-NW-DJM" firstAttribute="top" secondItem="RMm-K9-9hN" secondAttribute="bottom" constant="10" id="tEd-NU-NTk"/>
                             <constraint firstItem="ImW-Gb-Z3M" firstAttribute="top" secondItem="LEn-Bm-3l7" secondAttribute="bottom" constant="62" id="teB-7S-Im7"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" secondItem="cQK-NW-DJM" secondAttribute="trailing" id="zWR-Nu-oXC"/>
-                            <constraint firstItem="cQK-NW-DJM" firstAttribute="top" secondItem="RMm-K9-9hN" secondAttribute="bottom" constant="10" id="zaH-uB-UVF"/>
+                            <constraint firstItem="KvM-X2-YJK" firstAttribute="top" secondItem="RMm-K9-9hN" secondAttribute="bottom" constant="30" id="zns-VS-wDg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pfO-7F-mTA"/>
                     <connections>
                         <outlet property="emailLabel" destination="ovf-LI-Lon" id="2yk-9g-6JZ"/>
+                        <outlet property="firstGuideLabel" destination="KvM-X2-YJK" id="wVx-k0-lXU"/>
                         <outlet property="nameLabel" destination="LEn-Bm-3l7" id="VoM-P6-YzG"/>
                         <outlet property="phoneNumberLabel" destination="ImW-Gb-Z3M" id="5e3-ZP-oT6"/>
                         <outlet property="relationshipLabel" destination="ibc-lN-7J6" id="Xcs-TB-L77"/>

@@ -29,6 +29,7 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     private var targetMember = FAMember()
 
     @IBOutlet private weak var memberCollectionView: UICollectionView!
+    @IBOutlet private weak var firstGuideLabel: UILabel!
     @IBOutlet private weak var copyrightLabel: UILabel!
 
     // MARK: - Override Methods
@@ -103,6 +104,8 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     private func updateMemberList() {
         members = faCoreManager.getMemberList()
         memberCollectionView.reloadData()
+
+        firstGuideLabel.isHidden = !members.isEmpty
     }
 
     // MARK: - Actions
