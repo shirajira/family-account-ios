@@ -183,7 +183,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-H2-ree" userLabel="Add Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-H2-ree" userLabel="Add Button">
                                 <rect key="frame" x="330" y="754" width="64" height="64"/>
                                 <color key="backgroundColor" name="AddButton"/>
                                 <constraints>
@@ -191,7 +191,7 @@
                                     <constraint firstAttribute="width" constant="64" id="xra-jH-KbB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal">
+                                <state key="normal" image="File">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -310,7 +310,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ar-CL-xhO" userLabel="Add Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ar-CL-xhO" userLabel="Add Button">
                                 <rect key="frame" x="330" y="778" width="64" height="64"/>
                                 <color key="backgroundColor" name="AddButton"/>
                                 <constraints>
@@ -318,7 +318,7 @@
                                     <constraint firstAttribute="width" constant="64" id="xwy-LQ-BeV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal">
+                                <state key="normal" image="Pen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -426,7 +426,7 @@
                                     <constraint firstAttribute="height" constant="32" id="8SJ-sZ-Gg9"/>
                                     <constraint firstAttribute="width" constant="32" id="dnr-mh-jfK"/>
                                 </constraints>
-                                <state key="normal" image="Key"/>
+                                <state key="normal" image="Eye"/>
                                 <connections>
                                     <action selector="tapDownKey:" destination="GXT-cF-wmE" eventType="touchDown" id="tek-Co-mY3"/>
                                     <action selector="tapUpKey:" destination="GXT-cF-wmE" eventType="touchUpInside" id="pxZ-Zh-ZMe"/>
@@ -923,7 +923,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Key" width="16" height="16"/>
+        <image name="Eye" width="16" height="16"/>
+        <image name="File" width="24" height="24"/>
+        <image name="Pen" width="24" height="24"/>
         <namedColor name="AddButton">
             <color red="0.78700000047683716" green="0.064000003039836884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
