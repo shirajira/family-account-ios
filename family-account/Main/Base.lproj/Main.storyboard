@@ -268,18 +268,32 @@
                                 <color key="textColor" name="MainForegroundInactive"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="xCW-h0-044">
+                                <rect key="frame" x="15" y="210.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="UCf-cM-ojG"/>
+                                    <constraint firstAttribute="width" constant="16" id="lyh-ZN-f4N"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Email&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-LI-Lon">
-                                <rect key="frame" x="15" y="210" width="59.5" height="16.5"/>
+                                <rect key="frame" x="41" y="210" width="59.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" name="MainForeground"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Phone&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImW-Gb-Z3M">
-                                <rect key="frame" x="15" y="237" width="59.5" height="16.5"/>
+                                <rect key="frame" x="41" y="237" width="59.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" name="MainForeground"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone" translatesAutoresizingMaskIntoConstraints="NO" id="ybP-Dh-YBS">
+                                <rect key="frame" x="15" y="237.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="aac-ZD-3Cg"/>
+                                    <constraint firstAttribute="height" constant="16" id="i7A-So-Q8J"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-K9-9hN">
                                 <rect key="frame" x="15" y="284" width="89.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -344,13 +358,15 @@
                         <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="cQK-NW-DJM" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" id="0tG-pl-rgo"/>
+                            <constraint firstItem="ybP-Dh-YBS" firstAttribute="leading" secondItem="rgh-WY-Ga0" secondAttribute="leading" constant="15" id="3bs-wk-pIj"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LEn-Bm-3l7" secondAttribute="trailing" constant="15" id="6mU-cg-Wjg"/>
                             <constraint firstItem="ibc-lN-7J6" firstAttribute="top" secondItem="LEn-Bm-3l7" secondAttribute="bottom" constant="5" id="7Ur-Gt-cUc"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ibc-lN-7J6" secondAttribute="trailing" constant="15" id="95K-CI-DS6"/>
                             <constraint firstItem="ibc-lN-7J6" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" constant="15" id="Aib-XD-dPi"/>
                             <constraint firstItem="RMm-K9-9hN" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" constant="15" id="CGI-x3-Nol"/>
-                            <constraint firstItem="ImW-Gb-Z3M" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" constant="15" id="DHh-4Z-ImR"/>
                             <constraint firstItem="ecs-M4-YV8" firstAttribute="top" secondItem="Cns-nJ-08K" secondAttribute="top" constant="15" id="Dxr-lv-K3P"/>
+                            <constraint firstItem="ImW-Gb-Z3M" firstAttribute="centerY" secondItem="ybP-Dh-YBS" secondAttribute="centerY" id="Ezd-ih-5cp"/>
+                            <constraint firstItem="ImW-Gb-Z3M" firstAttribute="leading" secondItem="ybP-Dh-YBS" secondAttribute="trailing" constant="10" id="FJ7-nh-SZL"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ImW-Gb-Z3M" secondAttribute="trailing" constant="15" id="Kd2-nt-7jW"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RMm-K9-9hN" secondAttribute="trailing" constant="15" id="QA0-9D-dsb"/>
                             <constraint firstItem="LEn-Bm-3l7" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" constant="15" id="S5Z-A8-ASO"/>
@@ -360,7 +376,9 @@
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="bottom" secondItem="cQK-NW-DJM" secondAttribute="bottom" id="ZMA-gX-4jr"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ecs-M4-YV8" secondAttribute="trailing" constant="15" id="aJu-DE-3rh"/>
                             <constraint firstItem="ecs-M4-YV8" firstAttribute="leading" secondItem="rgh-WY-Ga0" secondAttribute="leading" constant="15" id="ajy-L0-Gry"/>
-                            <constraint firstItem="ovf-LI-Lon" firstAttribute="leading" secondItem="Cns-nJ-08K" secondAttribute="leading" constant="15" id="cds-WJ-nID"/>
+                            <constraint firstItem="xCW-h0-044" firstAttribute="leading" secondItem="rgh-WY-Ga0" secondAttribute="leading" constant="15" id="bPH-iH-AXM"/>
+                            <constraint firstItem="ovf-LI-Lon" firstAttribute="leading" secondItem="xCW-h0-044" secondAttribute="trailing" constant="10" id="d0u-ds-tyZ"/>
+                            <constraint firstItem="ovf-LI-Lon" firstAttribute="centerY" secondItem="xCW-h0-044" secondAttribute="centerY" id="ePi-Rj-0zp"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="trailing" secondItem="3Ar-CL-xhO" secondAttribute="trailing" constant="20" id="hUJ-T1-xSX"/>
                             <constraint firstItem="RMm-K9-9hN" firstAttribute="top" secondItem="LEn-Bm-3l7" secondAttribute="bottom" constant="109" id="pOw-bX-qfP"/>
                             <constraint firstItem="Cns-nJ-08K" firstAttribute="bottom" secondItem="3Ar-CL-xhO" secondAttribute="bottom" constant="20" id="rxU-42-gm5"/>
@@ -923,9 +941,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Email" width="16" height="16"/>
         <image name="Eye" width="16" height="16"/>
         <image name="File" width="24" height="24"/>
         <image name="Pen" width="24" height="24"/>
+        <image name="Phone" width="16" height="16"/>
         <namedColor name="AddButton">
             <color red="0.78700000047683716" green="0.064000003039836884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -87,8 +87,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     private func updateProfile() {
         nameLabel.text = targetMember.name
         relationshipLabel.text = targetMember.relationship
-        emailLabel.text = targetMember.email
-        phoneNumberLabel.text = targetMember.phoneNumber
+        setEmailLabel(targetMember.email)
+        setPhoneNumberLabel(targetMember.phoneNumber)
     }
 
     private func updateServiceList() {
@@ -139,6 +139,28 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         targetService = targetMember.services[indexPath.item]
         performSegue(withIdentifier: "toDetails", sender: nil)
+    }
+
+    // MARK: - Utilities
+
+    private func setEmailLabel(_ text: String) {
+        var email: String = ""
+        if text.isEmpty {
+            email = "N/A"
+        } else {
+            email = text
+        }
+        emailLabel.text = email
+    }
+
+    private func setPhoneNumberLabel(_ text: String) {
+        var phoneNumber: String = ""
+        if text.isEmpty {
+            phoneNumber = "N/A"
+        } else {
+            phoneNumber = text
+        }
+        phoneNumberLabel.text = phoneNumber
     }
 
 }
