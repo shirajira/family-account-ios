@@ -157,7 +157,34 @@ class FACoreManager {
     }
 
     /**
-     Get the member list.
+     Get the member.
+     - parameter filename: Filename
+     - returns: Member?
+     */
+    func getMember(at filename: String) -> FAMember? {
+        if filename.isEmpty {
+            return nil
+        }
+        let fileUrl = rootUrl.appendingPathComponent(filename)
+        if !FAFileManager.checkUrlExists(url: fileUrl) {
+            return nil
+        }
+        guard let fin = FileHandle(forReadingAtPath: fileUrl.path) else {
+            return nil
+        }
+        defer {
+            fin.closeFile()
+        }
+        let jsonData = fin.readDataToEndOfFile()
+        var member = FAMember()
+        if !member.importJson(jsonData: jsonData) {
+            return nil
+        }
+        return member
+    }
+
+    /**
+     Get the service list for the member.
      - parameter member: Target member
      - returns: Service list
      */
