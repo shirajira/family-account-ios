@@ -21,6 +21,11 @@ import XCTest
 
 class FirstGuideTests: XCTestCase {
 
+    func testResetFlag() {
+        let firstGuideManager = FirstGuideManager()
+        firstGuideManager.removeAll()
+    }
+
     func testFirstGuide() {
         let firstGuideManager = FirstGuideManager()
         firstGuideManager.removeAll()
