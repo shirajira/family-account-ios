@@ -31,6 +31,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet private weak var serviceNameLabel: UILabel!
     @IBOutlet private weak var accountLabel: UILabel!
     @IBOutlet private weak var passwordLabel: UILabel!
+    @IBOutlet private weak var notesLabel: UILabel!
     @IBOutlet private weak var createdLabel: UILabel!
     @IBOutlet private weak var updatedLabel: UILabel!
 
@@ -68,6 +69,7 @@ class DetailsViewController: UIViewController {
         serviceNameLabel.text = targetService.name
         accountLabel.text = targetService.account
         passwordLabel.text = mask(password: targetService.password)
+        notesLabel.text = targetService.notes
         createdLabel.text = targetService.created
         updatedLabel.text = targetService.updated
     }
