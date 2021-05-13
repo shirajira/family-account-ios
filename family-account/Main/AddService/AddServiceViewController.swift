@@ -41,6 +41,7 @@ class AddServiceViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var accountTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var notesTextView: UITextView!
     @IBOutlet private weak var dangerOperationView: UIView!
 
     // MARK: - Override Methods
@@ -79,6 +80,7 @@ class AddServiceViewController: UIViewController, UITextFieldDelegate {
                 nameTextField.text = service.name
                 accountTextField.text = service.account
                 passwordTextField.text = service.password
+                notesTextView.text = service.notes
             }
         }
     }
@@ -145,6 +147,7 @@ class AddServiceViewController: UIViewController, UITextFieldDelegate {
         service.name = nameTextField.text!
         service.account = accountTextField.text!
         service.password = passwordTextField.text!
+        service.notes = notesTextView.text!
 
         let currentTime = timestamp(format: "yyyy-MM-dd HH:mm:ss")
         service.created = currentTime
@@ -160,6 +163,7 @@ class AddServiceViewController: UIViewController, UITextFieldDelegate {
         targetService.name = nameTextField.text!
         targetService.account = accountTextField.text!
         targetService.password = passwordTextField.text!
+        targetService.notes = notesTextView.text!
 
         let currentTime = timestamp(format: "yyyy-MM-dd HH:mm:ss")
         targetService.updated = currentTime

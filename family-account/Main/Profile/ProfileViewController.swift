@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet private weak var emailLabel: UILabel!
     @IBOutlet private weak var phoneNumberLabel: UILabel!
     @IBOutlet private weak var serviceCollectionView: UICollectionView!
-    @IBOutlet private weak var firstGuideLabel: UILabel!
+    @IBOutlet private weak var emptyGuideLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +92,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         targetMember.services = faCoreManager.getServiceList(for: targetMember)
         serviceCollectionView.reloadData()
 
-        firstGuideLabel.isHidden = !targetMember.services.isEmpty
+        emptyGuideLabel.isHidden = !targetMember.services.isEmpty
     }
 
     // MARK: - Delegate Methods (UICollectionView etc.)

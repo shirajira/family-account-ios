@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - Copyright.swift
+// Family Account - FirstGuideViewController.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -16,14 +16,32 @@
 // limitations under the License.
 //--------------------------------------------------------------------------//
 
-import Foundation
+import UIKit
 
-/**
- Create a copyright notation based on the current year.
- - returns: Copyright (© yyyy)
- */
-func createCopyrightNotation() -> String {
-    let currentYear = timestamp(format: "yyyy")
-    let notation = "© \(currentYear)"
-    return notation
+class FirstGuideViewController: UIViewController {
+    /// First guide manager
+    private let firstGuideManager = FirstGuideManager()
+
+    // MARK: - Override Methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    // MARK: - Actions
+
+    @IBAction func tapRepository(_ sender: Any) {
+        Repository.open()
+    }
+
+    @IBAction func tapGetStarted(_ sender: Any) {
+        let neverShowAgain: Bool = true
+        returnToParentViewController(with: neverShowAgain)
+    }
+
+    private func returnToParentViewController(with neverShowAgain: Bool) {
+        firstGuideManager.neverShowAgain(neverShowAgain)
+        dismiss(animated: true, completion: nil)
+    }
+
 }

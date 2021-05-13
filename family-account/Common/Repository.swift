@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - Copyright.swift
+// Family Account - Repository.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -16,14 +16,24 @@
 // limitations under the License.
 //--------------------------------------------------------------------------//
 
+import UIKit
 import Foundation
 
-/**
- Create a copyright notation based on the current year.
- - returns: Copyright (© yyyy)
- */
-func createCopyrightNotation() -> String {
-    let currentYear = timestamp(format: "yyyy")
-    let notation = "© \(currentYear)"
-    return notation
+class Repository {
+    /// URL
+    static let url: String = "https://github.com/shirajira/family-account-ios"
+
+    /**
+     Try to open the repository.
+     - returns: true: Success / false: Failure
+     */
+    @discardableResult
+    static func open() -> Bool {
+        guard let repos = URL(string: url) else {
+            return false
+        }
+        UIApplication.shared.open(repos, options: [:], completionHandler: nil)
+        return true
+    }
+
 }

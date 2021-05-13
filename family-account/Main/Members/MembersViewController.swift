@@ -28,8 +28,11 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     /// Target member
     private var targetMember = FAMember()
 
+    /// First guide manager
+    private let firstGuideManager = FirstGuideManager()
+
     @IBOutlet private weak var memberCollectionView: UICollectionView!
-    @IBOutlet private weak var firstGuideLabel: UILabel!
+    @IBOutlet private weak var emptyGuideLabel: UILabel!
     @IBOutlet private weak var copyrightLabel: UILabel!
 
     // MARK: - Override Methods
@@ -41,6 +44,8 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         setupFAManager()
         setupCollectionView()
         setupCopyrightNotation()
+
+        requestToShowFirstGuide()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -97,7 +102,13 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         members = faCoreManager.getMemberList()
         memberCollectionView.reloadData()
 
-        firstGuideLabel.isHidden = !members.isEmpty
+        emptyGuideLabel.isHidden = !members.isEmpty
+    }
+
+    // MARK: - Actions
+
+    @IBAction func tapRepository(_ sender: Any) {
+        Repository.open()
     }
 
     // MARK: - Delegate Methods (UICollectionView etc.)
@@ -126,6 +137,21 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         targetMember = members[indexPath.item]
         performSegue(withIdentifier: "toProfile", sender: nil)
+    }
+
+    // MARK: - First Guide
+
+    private func requestToShowFirstGuide() {
+        let shouldShow = firstGuideManager.shouldShow()
+        if !shouldShow {
+            return
+        }
+        guard let firstGuideViewController = storyboard?.instantiateViewController(withIdentifier: "FirstGuide") as? FirstGuideViewController else {
+            return
+        }
+        firstGuideViewController.modalPresentationStyle = .overFullScreen
+        firstGuideViewController.modalTransitionStyle = .coverVertical
+        present(firstGuideViewController, animated: true, completion: nil)
     }
 
 }

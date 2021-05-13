@@ -22,10 +22,13 @@
 		F753732B26491BFE00B9D62A /* FAManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753732A26491BFE00B9D62A /* FAManagerTests.swift */; };
 		F753732D264929FB00B9D62A /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753732C264929FB00B9D62A /* AddMemberViewController.swift */; };
 		F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F764141E263B27B000C7CB4E /* AppDelegate.swift */; };
-		F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7641422263B27B000C7CB4E /* CautionViewController.swift */; };
 		F7641426263B27B000C7CB4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641424263B27B000C7CB4E /* Main.storyboard */; };
 		F7641428263B27B300C7CB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7641427263B27B300C7CB4E /* Assets.xcassets */; };
 		F764142B263B27B300C7CB4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7641429263B27B300C7CB4E /* LaunchScreen.storyboard */; };
+		F7712C11264D405A005FDC92 /* FirstGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C10264D405A005FDC92 /* FirstGuideViewController.swift */; };
+		F7712C13264D4067005FDC92 /* FirstGuideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C12264D4067005FDC92 /* FirstGuideManager.swift */; };
+		F7712C16264D42FB005FDC92 /* FirstGuideManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C15264D42FB005FDC92 /* FirstGuideManagerTests.swift */; };
+		F7712C18264D8AC0005FDC92 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C17264D8AC0005FDC92 /* Repository.swift */; };
 		F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F326494A7800606397 /* ProfileViewController.swift */; };
 		F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */; };
 		F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */; };
@@ -71,7 +74,6 @@
 		F753732C264929FB00B9D62A /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		F764141B263B27B000C7CB4E /* family-account.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "family-account.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F764141E263B27B000C7CB4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7641422263B27B000C7CB4E /* CautionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionViewController.swift; sourceTree = "<group>"; };
 		F7641425263B27B000C7CB4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7641427263B27B300C7CB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F764142A263B27B300C7CB4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,10 @@
 		F7641437263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F764143C263B27B300C7CB4E /* family-accountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "family-accountUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7641442263B27B300C7CB4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7712C10264D405A005FDC92 /* FirstGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGuideViewController.swift; sourceTree = "<group>"; };
+		F7712C12264D4067005FDC92 /* FirstGuideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGuideManager.swift; sourceTree = "<group>"; };
+		F7712C15264D42FB005FDC92 /* FirstGuideManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGuideManagerTests.swift; sourceTree = "<group>"; };
+		F7712C17264D8AC0005FDC92 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F794F4F326494A7800606397 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 			children = (
 				F70B88A9263B496B00142533 /* Timestamp.swift */,
 				F7B0B882263D8357001A5C5F /* Copyright.swift */,
+				F7712C17264D8AC0005FDC92 /* Repository.swift */,
 				F71DAA83263C8CD70046A6E4 /* Colors.swift */,
 				F71DAA7F263C71800046A6E4 /* TouchableScrollView.swift */,
 			);
@@ -140,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F7641424263B27B000C7CB4E /* Main.storyboard */,
-				F794F5022649915200606397 /* Caution */,
+				F7712C0F264D403A005FDC92 /* FirstGuide */,
 				F794F4FD264990EA00606397 /* Members */,
 				F794F4FE2649910500606397 /* AddMember */,
 				F794F4FF2649911500606397 /* Profile */,
@@ -205,6 +212,7 @@
 			children = (
 				F70B88AB263B4A1500142533 /* Common */,
 				F75373232648DAE100B9D62A /* FACore */,
+				F7712C14264D42E5005FDC92 /* Main */,
 				F70B88A6263B3CB800142533 /* family_accountTests.swift */,
 				F7641437263B27B300C7CB4E /* Info.plist */,
 			);
@@ -218,6 +226,23 @@
 				F7641442263B27B300C7CB4E /* Info.plist */,
 			);
 			path = "family-accountUITests";
+			sourceTree = "<group>";
+		};
+		F7712C0F264D403A005FDC92 /* FirstGuide */ = {
+			isa = PBXGroup;
+			children = (
+				F7712C10264D405A005FDC92 /* FirstGuideViewController.swift */,
+				F7712C12264D4067005FDC92 /* FirstGuideManager.swift */,
+			);
+			path = FirstGuide;
+			sourceTree = "<group>";
+		};
+		F7712C14264D42E5005FDC92 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F7712C15264D42FB005FDC92 /* FirstGuideManagerTests.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F794F4FD264990EA00606397 /* Members */ = {
@@ -262,14 +287,6 @@
 				F794F4FB264982B600606397 /* DetailsViewController.swift */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		F794F5022649915200606397 /* Caution */ = {
-			isa = PBXGroup;
-			children = (
-				F7641422263B27B000C7CB4E /* CautionViewController.swift */,
-			);
-			path = Caution;
 			sourceTree = "<group>";
 		};
 		F7B0B886263D8C77001A5C5F /* FACore */ = {
@@ -421,7 +438,9 @@
 				F753732D264929FB00B9D62A /* AddMemberViewController.swift in Sources */,
 				F70B88AA263B496B00142533 /* Timestamp.swift in Sources */,
 				F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */,
+				F7712C11264D405A005FDC92 /* FirstGuideViewController.swift in Sources */,
 				F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */,
+				F7712C18264D8AC0005FDC92 /* Repository.swift in Sources */,
 				F75373292649140800B9D62A /* FAErrorCode.swift in Sources */,
 				F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */,
 				F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */,
@@ -432,9 +451,9 @@
 				F794F4FC264982B600606397 /* DetailsViewController.swift in Sources */,
 				F753731C2648C41100B9D62A /* FACoreManager.swift in Sources */,
 				F75373222648D5B700B9D62A /* FAFileManager.swift in Sources */,
+				F7712C13264D4067005FDC92 /* FirstGuideManager.swift in Sources */,
 				F7B0B883263D8357001A5C5F /* Copyright.swift in Sources */,
 				F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */,
-				F7641423263B27B000C7CB4E /* CautionViewController.swift in Sources */,
 				F764141F263B27B000C7CB4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +466,7 @@
 				F70B88AD263B4A2700142533 /* TimestampTests.swift in Sources */,
 				F70B88A7263B3CB800142533 /* family_accountTests.swift in Sources */,
 				F7B0B885263D840E001A5C5F /* CopyrightTests.swift in Sources */,
+				F7712C16264D42FB005FDC92 /* FirstGuideManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
