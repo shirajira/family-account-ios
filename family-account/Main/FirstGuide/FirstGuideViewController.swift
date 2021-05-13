@@ -19,10 +19,25 @@
 import UIKit
 
 class FirstGuideViewController: UIViewController {
+    /// First guide manager
+    private let firstGuideManager = FirstGuideManager()
+
+    // MARK: - Override Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
+    // MARK: - Actions
+
+    @IBAction func tapGetStarted(_ sender: Any) {
+        let neverShowAgain: Bool = true
+        returnToParentViewController(with: neverShowAgain)
+    }
+
+    private func returnToParentViewController(with neverShowAgain: Bool) {
+        firstGuideManager.neverShowAgain(neverShowAgain)
+        dismiss(animated: true, completion: nil)
     }
 
 }

@@ -529,8 +529,34 @@
                     <view key="view" contentMode="scaleToFill" id="VnM-C0-iCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stP-5J-BQt">
+                                <rect key="frame" x="30" y="757" width="354" height="45"/>
+                                <color key="backgroundColor" name="MainNavigation"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="oEy-Oc-Jti"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapGetStarted:" destination="Fz5-D2-JJH" eventType="touchUpInside" id="I46-gO-qRG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wd4-Er-bjg"/>
                         <color key="backgroundColor" name="MainBackground"/>
+                        <constraints>
+                            <constraint firstItem="stP-5J-BQt" firstAttribute="leading" secondItem="wd4-Er-bjg" secondAttribute="leading" constant="30" id="CbM-FE-Lqd"/>
+                            <constraint firstItem="wd4-Er-bjg" firstAttribute="bottom" secondItem="stP-5J-BQt" secondAttribute="bottom" constant="60" id="Tax-aV-r6L"/>
+                            <constraint firstItem="wd4-Er-bjg" firstAttribute="trailing" secondItem="stP-5J-BQt" secondAttribute="trailing" constant="30" id="zFK-TF-i8m"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjR-Jm-ycd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

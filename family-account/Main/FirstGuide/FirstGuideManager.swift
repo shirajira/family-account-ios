@@ -25,7 +25,7 @@ class FirstGuideManager {
     /// Key
     private let key: String = "FirstGuideNeverShowAgain"
 
-    // MARK: -
+    // MARK: - Main APIs
 
     func shouldShow() -> Bool {
         let neverShowAgain = get(forKey: key)
