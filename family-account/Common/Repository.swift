@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------//
-// Family Account - FirstGuideViewController.swift
+// Family Account - Repository.swift
 //
 // Copyright 2021 shirajira <contact@novel-stud.io>
 //
@@ -17,31 +17,23 @@
 //--------------------------------------------------------------------------//
 
 import UIKit
+import Foundation
 
-class FirstGuideViewController: UIViewController {
-    /// First guide manager
-    private let firstGuideManager = FirstGuideManager()
+class Repository {
+    /// URL
+    static let url: String = "https://github.com/shirajira/family-account-ios"
 
-    // MARK: - Override Methods
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    // MARK: - Actions
-
-    @IBAction func tapRepository(_ sender: Any) {
-        Repository.open()
-    }
-
-    @IBAction func tapGetStarted(_ sender: Any) {
-        let neverShowAgain: Bool = true
-        returnToParentViewController(with: neverShowAgain)
-    }
-
-    private func returnToParentViewController(with neverShowAgain: Bool) {
-        firstGuideManager.neverShowAgain(neverShowAgain)
-        dismiss(animated: true, completion: nil)
+    /**
+     Try to open the repository.
+     - returns: true: Success / false: Failure
+     */
+    @discardableResult
+    static func open() -> Bool {
+        guard let repos = URL(string: url) else {
+            return false
+        }
+        UIApplication.shared.open(repos, options: [:], completionHandler: nil)
+        return true
     }
 
 }

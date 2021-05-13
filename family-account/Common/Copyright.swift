@@ -20,10 +20,10 @@ import Foundation
 
 /**
  Create a copyright notation based on the current year.
- - returns: Copyright (© yyyy Family Account)
+ - returns: Copyright (© yyyy)
  */
 func createCopyrightNotation() -> String {
     let currentYear = timestamp(format: "yyyy")
-    let notation = "© \(currentYear) Family Account"
+    let notation = "© \(currentYear)"
     return notation
 }

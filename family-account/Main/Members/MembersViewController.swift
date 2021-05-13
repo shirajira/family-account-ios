@@ -32,7 +32,7 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
     private let firstGuideManager = FirstGuideManager()
 
     @IBOutlet private weak var memberCollectionView: UICollectionView!
-    @IBOutlet private weak var firstGuideLabel: UILabel!
+    @IBOutlet private weak var emptyGuideLabel: UILabel!
     @IBOutlet private weak var copyrightLabel: UILabel!
 
     // MARK: - Override Methods
@@ -102,7 +102,13 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
         members = faCoreManager.getMemberList()
         memberCollectionView.reloadData()
 
-        firstGuideLabel.isHidden = !members.isEmpty
+        emptyGuideLabel.isHidden = !members.isEmpty
+    }
+
+    // MARK: - Actions
+
+    @IBAction func tapRepository(_ sender: Any) {
+        Repository.open()
     }
 
     // MARK: - Delegate Methods (UICollectionView etc.)

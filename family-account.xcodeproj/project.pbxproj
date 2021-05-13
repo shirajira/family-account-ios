@@ -28,6 +28,7 @@
 		F7712C11264D405A005FDC92 /* FirstGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C10264D405A005FDC92 /* FirstGuideViewController.swift */; };
 		F7712C13264D4067005FDC92 /* FirstGuideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C12264D4067005FDC92 /* FirstGuideManager.swift */; };
 		F7712C16264D42FB005FDC92 /* FirstGuideManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C15264D42FB005FDC92 /* FirstGuideManagerTests.swift */; };
+		F7712C18264D8AC0005FDC92 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7712C17264D8AC0005FDC92 /* Repository.swift */; };
 		F794F4F426494A7800606397 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F326494A7800606397 /* ProfileViewController.swift */; };
 		F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */; };
 		F794F4F8264961EE00606397 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */; };
@@ -84,6 +85,7 @@
 		F7712C10264D405A005FDC92 /* FirstGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGuideViewController.swift; sourceTree = "<group>"; };
 		F7712C12264D4067005FDC92 /* FirstGuideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGuideManager.swift; sourceTree = "<group>"; };
 		F7712C15264D42FB005FDC92 /* FirstGuideManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGuideManagerTests.swift; sourceTree = "<group>"; };
+		F7712C17264D8AC0005FDC92 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F794F4F326494A7800606397 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F794F4F5264961EE00606397 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F794F4F6264961EE00606397 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				F70B88A9263B496B00142533 /* Timestamp.swift */,
 				F7B0B882263D8357001A5C5F /* Copyright.swift */,
+				F7712C17264D8AC0005FDC92 /* Repository.swift */,
 				F71DAA83263C8CD70046A6E4 /* Colors.swift */,
 				F71DAA7F263C71800046A6E4 /* TouchableScrollView.swift */,
 			);
@@ -437,6 +440,7 @@
 				F794F4F7264961EE00606397 /* ServiceCollectionViewCell.swift in Sources */,
 				F7712C11264D405A005FDC92 /* FirstGuideViewController.swift in Sources */,
 				F71DAA84263C8CD70046A6E4 /* Colors.swift in Sources */,
+				F7712C18264D8AC0005FDC92 /* Repository.swift in Sources */,
 				F75373292649140800B9D62A /* FAErrorCode.swift in Sources */,
 				F7B0B88A263D8DA8001A5C5F /* FAMember.swift in Sources */,
 				F7B0B888263D8C9D001A5C5F /* FAService.swift in Sources */,
