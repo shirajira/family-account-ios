@@ -421,8 +421,7 @@
                                                 </constraints>
                                                 <state key="normal" image="Eye"/>
                                                 <connections>
-                                                    <action selector="tapDownKey:" destination="GXT-cF-wmE" eventType="touchDown" id="tek-Co-mY3"/>
-                                                    <action selector="tapUpKey:" destination="GXT-cF-wmE" eventType="touchUpInside" id="pxZ-Zh-ZMe"/>
+                                                    <action selector="tapEye:" destination="GXT-cF-wmE" eventType="touchUpInside" id="1wd-y4-fcS"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beH-8Z-g19">
@@ -541,6 +540,7 @@
                         <outlet property="notesLabel" destination="ZFa-YK-wlC" id="ifK-tj-0tD"/>
                         <outlet property="passwordLabel" destination="boQ-fS-rS7" id="HKz-46-xMa"/>
                         <outlet property="serviceNameLabel" destination="fRn-J5-cmF" id="yeF-fu-Jta"/>
+                        <outlet property="showPasswordButton" destination="Oui-Dm-LfM" id="hP9-Ua-J5S"/>
                         <outlet property="updatedLabel" destination="bBT-mo-d5I" id="JGu-D9-Vi1"/>
                     </connections>
                 </viewController>
@@ -932,7 +932,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4i-vM-9El">
-                                                <rect key="frame" x="15" y="15" width="78.666666666666671" height="24"/>
+                                                <rect key="frame" x="15" y="15" width="79" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" name="MainForeground"/>
                                                 <nil key="highlightedColor"/>
@@ -1149,7 +1149,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="i6Q-ru-Hbm"/>
+        <segue reference="Tgl-NC-obJ"/>
         <segue reference="rVe-Ty-eZY"/>
     </inferredMetricsTieBreakers>
     <resources>
