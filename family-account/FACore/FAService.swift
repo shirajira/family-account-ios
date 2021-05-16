@@ -31,6 +31,9 @@ struct FAService: Codable {
     /// Notes
     var notes: String = ""
 
+    /// Website
+    var website: String = ""
+
     /// Created timestamp
     var created: String = ""
 
