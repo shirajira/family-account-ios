@@ -50,8 +50,8 @@
 /* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Lew-Rk-WSF"; */
 "Lew-Rk-WSF.title" = "保存";
 
-/* Class = "UITextField"; placeholder = "Mother, Father or Son etc."; ObjectID = "Oc5-m9-hJP"; */
-"Oc5-m9-hJP.placeholder" = "お母さん, お父さん, 長男 etc.";
+/* Class = "UITextField"; placeholder = "Father, Wife or Son etc."; ObjectID = "Oc5-m9-hJP"; */
+"Oc5-m9-hJP.placeholder" = "お父さん, 妻, 長男 etc.";
 
 /* Class = "UILabel"; text = "Updated"; ObjectID = "PDa-Ov-DUK"; */
 "PDa-Ov-DUK.text" = "更新日";
