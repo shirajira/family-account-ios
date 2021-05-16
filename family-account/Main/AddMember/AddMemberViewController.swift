@@ -161,12 +161,12 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func requestToDelete() {
-        let alert = UIAlertController(title: "A", message: "B", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: alertConfirm, style: .destructive, handler: { _ in
             self.deleteMember()
             self.popViewController()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: alertCancel, style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 
@@ -222,5 +222,23 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
             }
         )
     }
+
+    // MARK: - Localized Messages
+
+    private let alertTitle: String = {
+        return NSLocalizedString("MainDeleteTitle", tableName: "MainLocalized", value: "Caution", comment: "")
+    }()
+
+    private let alertMessage: String = {
+        return NSLocalizedString("MainDeleteMessage", tableName: "MainLocalized", value: "This operation cannot be undone.", comment: "")
+    }()
+
+    private let alertConfirm: String = {
+        return NSLocalizedString("MainDeleteConfirm", tableName: "MainLocalized", value: "Delete", comment: "")
+    }()
+
+    private let alertCancel: String = {
+        return NSLocalizedString("MainDeleteTitleCancel", tableName: "MainLocalized", value: "Cancel", comment: "")
+    }()
 
 }

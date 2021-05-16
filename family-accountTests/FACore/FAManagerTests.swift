@@ -87,10 +87,10 @@ class FAManagerTests: XCTestCase {
         faCoreManager.createRootDirectory()
 
         let services: [FAService] = [
-            FAService(name: "S1", account: "s1", password: "1234", notes: "", created: "", updated: ""),
-            FAService(name: "S2", account: "s2", password: "ABCD", notes: "", created: "", updated: ""),
-            FAService(name: "S3", account: "s3", password: "5555", notes: "", created: "", updated: ""),
-            FAService(name: "S4", account: "s4", password: "9999", notes: "", created: "", updated: "")
+            FAService(name: "S1", account: "s1", password: "1234", notes: "", website: "", created: "", updated: ""),
+            FAService(name: "S2", account: "s2", password: "ABCD", notes: "", website: "", created: "", updated: ""),
+            FAService(name: "S3", account: "s3", password: "5555", notes: "", website: "", created: "", updated: ""),
+            FAService(name: "S4", account: "s4", password: "9999", notes: "", website: "", created: "", updated: "")
         ]
 
         let member1 = FAMember(filename: "member1.json", name: "1", relationship: "11", email: "111", phoneNumber: "1111", iconFilename: "", services: services)

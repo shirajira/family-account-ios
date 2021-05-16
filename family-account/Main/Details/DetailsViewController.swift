@@ -28,9 +28,16 @@ class DetailsViewController: UIViewController {
     /// Target service
     private var targetService = FAService()
 
+    /// Show the password or not.
+    private var showPasswordStatus: Bool = false
+
+    /// Haptics feedback
+    private let haptics = UIImpactFeedbackGenerator(style: .light)
+
     @IBOutlet private weak var serviceNameLabel: UILabel!
     @IBOutlet private weak var accountLabel: UILabel!
     @IBOutlet private weak var passwordLabel: UILabel!
+    @IBOutlet private weak var showPasswordButton: UIButton!
     @IBOutlet private weak var notesLabel: UILabel!
     @IBOutlet private weak var createdLabel: UILabel!
     @IBOutlet private weak var updatedLabel: UILabel!
@@ -84,12 +91,34 @@ class DetailsViewController: UIViewController {
 
     // MARK: - Actions
 
-    @IBAction func tapDownKey(_ sender: Any) {
+    @IBAction func tapEye(_ sender: Any) {
+        if !showPasswordStatus {
+            // Switch to show the password.
+            showPasswordStatus = true
+            showPassword()
+        } else {
+            // Switch to hide the password.
+            showPasswordStatus = false
+            hidePassword()
+        }
+        playHaptics()
+    }
+
+    private func showPassword() {
+        let eyeClosed = UIImage(named: "EyeClosed")
+        showPasswordButton.setImage(eyeClosed, for: .normal)
         passwordLabel.text = targetService.password
     }
 
-    @IBAction func tapUpKey(_ sender: Any) {
+    private func hidePassword() {
+        let eyeOpened = UIImage(named: "Eye")
+        showPasswordButton.setImage(eyeOpened, for: .normal)
         passwordLabel.text = mask(password: targetService.password)
+    }
+
+    private func playHaptics() {
+        haptics.prepare()
+        haptics.impactOccurred()
     }
 
 }
