@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "This app does not collect any user data, logs and activities."; ObjectID = "0Dl-O7-9YV"; */
-"0Dl-O7-9YV.text" = "このアプリはいかなるユーザーデータ、操作ログ、アクティビティも収集しません。";
+"0Dl-O7-9YV.text" = "いかなるユーザーデータ、操作ログ、アクティビティも収集しません。";
 
 /* Class = "UILabel"; text = "Members"; ObjectID = "1B1-1k-hbH"; */
 "1B1-1k-hbH.text" = "メンバー";
@@ -39,7 +39,7 @@
 "Jce-ei-Idx.text" = "パスワード";
 
 /* Class = "UILabel"; text = "Check out the repository:"; ObjectID = "KUg-r6-waD"; */
-"KUg-r6-waD.text" = "このアプリはオープンソースで開発されています。";
+"KUg-r6-waD.text" = "オープンソースで開発されています。";
 
 /* Class = "UILabel"; text = "Add an account."; ObjectID = "KvM-X2-YJK"; */
 "KvM-X2-YJK.text" = "サービスごとのログイン情報を作成しましょう。";
@@ -93,7 +93,7 @@
 "boQ-fS-rS7.text" = "<Password>";
 
 /* Class = "UILabel"; text = "- First Guide -"; ObjectID = "cZF-F2-AFP"; */
-"cZF-F2-AFP.text" = "- ようこそ -";
+"cZF-F2-AFP.text" = "- はじめに -";
 
 /* Class = "UILabel"; text = "Member's Profile"; ObjectID = "d6V-54-2H7"; */
 "d6V-54-2H7.text" = "プロフィール設定";
