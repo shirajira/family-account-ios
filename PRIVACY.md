@@ -4,8 +4,8 @@
 
 Select your language:
 
-- [English](./privacy_en.md)
-- [Japanese](./privacy_jp.md)
+- [English](./privacy-policy/privacy_en.md)
+- [Japanese](./privacy-policy/privacy_jp.md)
 
 ## **Contact Us**
 
