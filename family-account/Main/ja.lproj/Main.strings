@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "This app does not collect any user data, logs and activities."; ObjectID = "0Dl-O7-9YV"; */
-"0Dl-O7-9YV.text" = "このアプリはいかなるユーザーデータ、操作ログ、アクティビティを収集しません。";
+"0Dl-O7-9YV.text" = "このアプリはいかなるユーザーデータ、操作ログ、アクティビティも収集しません。";
 
 /* Class = "UILabel"; text = "Members"; ObjectID = "1B1-1k-hbH"; */
 "1B1-1k-hbH.text" = "メンバー";
@@ -57,7 +57,7 @@
 "PDa-Ov-DUK.text" = "更新日";
 
 /* Class = "UILabel"; text = "Accounts"; ObjectID = "RMm-K9-9hN"; */
-"RMm-K9-9hN.text" = "アカウント";
+"RMm-K9-9hN.text" = "アカウント一覧";
 
 /* Class = "UILabel"; text = "*Required"; ObjectID = "ROr-iO-a1S"; */
 "ROr-iO-a1S.text" = "*必須";
