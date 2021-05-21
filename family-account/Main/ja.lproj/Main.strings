@@ -1,0 +1,147 @@
+
+/* Class = "UILabel"; text = "This app does not collect any user data, logs and activities."; ObjectID = "0Dl-O7-9YV"; */
+"0Dl-O7-9YV.text" = "いかなるユーザーデータ、操作ログ、アクティビティも収集しません。";
+
+/* Class = "UILabel"; text = "Members"; ObjectID = "1B1-1k-hbH"; */
+"1B1-1k-hbH.text" = "メンバー";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "4aF-fU-vWT"; */
+"4aF-fU-vWT.text" = "ID";
+
+/* Class = "UILabel"; text = "Main Phone Number"; ObjectID = "6yK-Z4-unh"; */
+"6yK-Z4-unh.text" = "メインの電話番号";
+
+/* Class = "UILabel"; text = "Service Name"; ObjectID = "7cz-N0-lLp"; */
+"7cz-N0-lLp.text" = "サービス名";
+
+/* Class = "UILabel"; text = "Account"; ObjectID = "A4i-vM-9El"; */
+"A4i-vM-9El.text" = "アカウント情報";
+
+/* Class = "UILabel"; text = "Add a member, first."; ObjectID = "EW8-Yo-yTE"; */
+"EW8-Yo-yTE.text" = "まずはメンバーを追加しましょう。";
+
+/* Class = "UILabel"; text = "Open-Source Software"; ObjectID = "EhC-sK-qYA"; */
+"EhC-sK-qYA.text" = "オープンソース";
+
+/* Class = "UILabel"; text = "Created"; ObjectID = "Hvz-QK-6zg"; */
+"Hvz-QK-6zg.text" = "作成日";
+
+/* Class = "UILabel"; text = "Main Email Address"; ObjectID = "IM2-gc-3aD"; */
+"IM2-gc-3aD.text" = "メインのメールアドレス";
+
+/* Class = "UILabel"; text = "<Phone>"; ObjectID = "ImW-Gb-Z3M"; */
+"ImW-Gb-Z3M.text" = "<Phone>";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "J0D-L0-JQq"; */
+"J0D-L0-JQq.normalTitle" = "削除";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "Jce-ei-Idx"; */
+"Jce-ei-Idx.text" = "パスワード";
+
+/* Class = "UILabel"; text = "Check out the repository:"; ObjectID = "KUg-r6-waD"; */
+"KUg-r6-waD.text" = "オープンソースで開発されています。";
+
+/* Class = "UILabel"; text = "Add an account."; ObjectID = "KvM-X2-YJK"; */
+"KvM-X2-YJK.text" = "サービスごとのログイン情報を作成しましょう。";
+
+/* Class = "UILabel"; text = "<Name>"; ObjectID = "LEn-Bm-3l7"; */
+"LEn-Bm-3l7.text" = "<Name>";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Lew-Rk-WSF"; */
+"Lew-Rk-WSF.title" = "保存";
+
+/* Class = "UITextField"; placeholder = "Father, Wife or Son etc."; ObjectID = "Oc5-m9-hJP"; */
+"Oc5-m9-hJP.placeholder" = "お父さん, 妻, 長男 etc.";
+
+/* Class = "UILabel"; text = "Updated"; ObjectID = "PDa-Ov-DUK"; */
+"PDa-Ov-DUK.text" = "更新日";
+
+/* Class = "UILabel"; text = "Accounts"; ObjectID = "RMm-K9-9hN"; */
+"RMm-K9-9hN.text" = "アカウント一覧";
+
+/* Class = "UILabel"; text = "*Required"; ObjectID = "ROr-iO-a1S"; */
+"ROr-iO-a1S.text" = "*必須";
+
+/* Class = "UIButton"; normalTitle = "Family Account"; ObjectID = "UKS-Ou-AgU"; */
+"UKS-Ou-AgU.normalTitle" = "Family Account";
+
+/* Class = "UILabel"; text = "Protected"; ObjectID = "XgK-n9-HJj"; */
+"XgK-n9-HJj.text" = "データの保護";
+
+/* Class = "UIButton"; normalTitle = "github.com/shirajira/family-account-ios"; ObjectID = "Ypi-A4-icR"; */
+"Ypi-A4-icR.normalTitle" = "github.com/shirajira/family-account-ios";
+
+/* Class = "UILabel"; text = "Danger Operation"; ObjectID = "YuZ-Sm-eWi"; */
+"YuZ-Sm-eWi.text" = "致命的な操作";
+
+/* Class = "UILabel"; text = "2021-05-10 23:10:12"; ObjectID = "Z3O-2Y-DvC"; */
+"Z3O-2Y-DvC.text" = "2021-05-10 23:10:12";
+
+/* Class = "UILabel"; text = "<Notes>"; ObjectID = "ZFa-YK-wlC"; */
+"ZFa-YK-wlC.text" = "<Notes>";
+
+/* Class = "UILabel"; text = "© YYYY"; ObjectID = "aQX-ls-3w8"; */
+"aQX-ls-3w8.text" = "© YYYY";
+
+/* Class = "UILabel"; text = "2021-05-11 04:35:45"; ObjectID = "bBT-mo-d5I"; */
+"bBT-mo-d5I.text" = "2021-05-11 04:35:45";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "beH-8Z-g19"; */
+"beH-8Z-g19.text" = "メモ";
+
+/* Class = "UILabel"; text = "<Password>"; ObjectID = "boQ-fS-rS7"; */
+"boQ-fS-rS7.text" = "<Password>";
+
+/* Class = "UILabel"; text = "- First Guide -"; ObjectID = "cZF-F2-AFP"; */
+"cZF-F2-AFP.text" = "- はじめに -";
+
+/* Class = "UILabel"; text = "Member's Profile"; ObjectID = "d6V-54-2H7"; */
+"d6V-54-2H7.text" = "プロフィール設定";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "dbR-VV-Kfh"; */
+"dbR-VV-Kfh.text" = "メモ";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "ecs-M4-YV8"; */
+"ecs-M4-YV8.text" = "プロフィール";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "fDT-PP-LnM"; */
+"fDT-PP-LnM.text" = "パスワード";
+
+/* Class = "UILabel"; text = "<Service Name>"; ObjectID = "fRn-J5-cmF"; */
+"fRn-J5-cmF.text" = "<Service Name>";
+
+/* Class = "UILabel"; text = "<ID>"; ObjectID = "ghE-U9-XGX"; */
+"ghE-U9-XGX.text" = "<ID>";
+
+/* Class = "UILabel"; text = "<Relationship>"; ObjectID = "ibc-lN-7J6"; */
+"ibc-lN-7J6.text" = "<Relationship>";
+
+/* Class = "UILabel"; text = "Danger Operation"; ObjectID = "jRF-Xc-CPz"; */
+"jRF-Xc-CPz.text" = "致命的な操作";
+
+/* Class = "UILabel"; text = "Relationship"; ObjectID = "jdk-SD-xvL"; */
+"jdk-SD-xvL.text" = "続柄";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "mkG-T2-acR"; */
+"mkG-T2-acR.text" = "名前";
+
+/* Class = "UILabel"; text = "<Email>"; ObjectID = "ovf-LI-Lon"; */
+"ovf-LI-Lon.text" = "<Email>";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "pNa-XT-CdN"; */
+"pNa-XT-CdN.normalTitle" = "削除";
+
+/* Class = "UILabel"; text = "Remember Everyone's Passwords"; ObjectID = "ptf-ng-kRk"; */
+"ptf-ng-kRk.text" = "家族のアカウントを管理";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "qts-db-boe"; */
+"qts-db-boe.text" = "ID";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "rts-N6-JWK"; */
+"rts-N6-JWK.title" = "保存";
+
+/* Class = "UILabel"; text = "*Required"; ObjectID = "sPF-hi-Q5k"; */
+"sPF-hi-Q5k.text" = "*必須";
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "stP-5J-BQt"; */
+"stP-5J-BQt.normalTitle" = "はじめる";
