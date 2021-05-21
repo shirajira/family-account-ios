@@ -6,9 +6,10 @@ Simple and light-weight account management app for iOS.
 
 ## **Features**
 
+- Users can add some people to manage their accounts.
 - Any user data, logs and activities are not collected.
 - User data are saved in protected directory.
-- Free download and NO ads.
+- Ads-free.
 
 ## **Requirements**
 
@@ -20,7 +21,7 @@ Simple and light-weight account management app for iOS.
 
 See `LICENSE` file.
 
-## **Acknowledgement**
+## **Acknowledgements**
 
 ### **Materials**
 

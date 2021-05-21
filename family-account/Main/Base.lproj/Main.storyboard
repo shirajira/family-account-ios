@@ -813,10 +813,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0D-L0-JQq">
-                                                        <rect key="frame" x="255" y="39" width="120" height="30"/>
+                                                        <rect key="frame" x="285" y="39" width="90" height="30"/>
                                                         <color key="backgroundColor" name="MainRed"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7QW-6N-oql"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="7QW-6N-oql"/>
                                                             <constraint firstAttribute="height" constant="30" id="rBr-jT-Sp1"/>
                                                         </constraints>
                                                         <state key="normal" title="Delete">
@@ -1040,10 +1040,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNa-XT-CdN">
-                                                        <rect key="frame" x="255" y="39" width="120" height="30"/>
+                                                        <rect key="frame" x="285" y="39" width="90" height="30"/>
                                                         <color key="backgroundColor" name="MainRed"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="WCy-mu-juD"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="WCy-mu-juD"/>
                                                             <constraint firstAttribute="height" constant="30" id="tnu-IZ-Qcq"/>
                                                         </constraints>
                                                         <state key="normal" title="Delete">

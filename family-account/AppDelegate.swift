@@ -24,7 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        // Wait for splash for 500ms.
+        presentSplash(for: 500)
+
         return true
+    }
+
+    // MARK: - Utilities
+
+    private func presentSplash(for ms: UInt32) {
+        usleep(ms * 1_000)
     }
 
 }

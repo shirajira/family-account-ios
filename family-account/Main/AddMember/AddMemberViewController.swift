@@ -53,6 +53,12 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
         showErrorMessage(enabled: false)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        openKeyboard()
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -100,6 +106,10 @@ class AddMemberViewController: UIViewController, UITextFieldDelegate {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
+    }
+
+    private func openKeyboard() {
+        nameTextField.becomeFirstResponder()
     }
 
     // MARK: - Actions

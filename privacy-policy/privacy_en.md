@@ -2,7 +2,8 @@
 
 ## **Collection of Personal Information**
 
-This application does not collect any information about user data, logs, or activities.  
+This application does not collect any information about user data, logs, or activities.
+
 However, the personal information (email address, etc.) provided when making inquiries to our service is defined as follows.
 
 ## **Purpose of Collecting Personal Information**
