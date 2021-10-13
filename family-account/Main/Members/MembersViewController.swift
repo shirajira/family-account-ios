@@ -75,6 +75,13 @@ class MembersViewController: UIViewController, UICollectionViewDataSource, UICol
             navigation.navigationBar.tintColor = .mainWhite
             navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainWhite]
             navigation.navigationBar.shadowImage = UIImage()
+
+            if #available(iOS 15, *) {
+                let appearance = UINavigationBarAppearance()
+                appearance.backgroundColor = .mainNavigation
+                navigation.navigationBar.standardAppearance = appearance
+                navigation.navigationBar.scrollEdgeAppearance = appearance
+            }
         }
     }
 
